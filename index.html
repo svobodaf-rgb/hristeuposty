@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="light" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
     />
     <meta
       http-equiv="Permissions-Policy"
@@ -25,9 +25,15 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="cs_CZ" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Epilogue:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f5f7f1'/%3E%3Ccircle cx='20' cy='42' r='8' fill='%233f7d45'/%3E%3Cpath d='M15 35h31l-9 13H24z' fill='%23d8c478'/%3E%3Cpath d='M35 17v31' stroke='%231d2a20' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M27 23c8-10 19-8 23-2-6 6-16 8-23 2z' fill='%2389b978'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23fff8dd'/%3E%3Ccircle cx='20' cy='42' r='8' fill='%231db96a'/%3E%3Cpath d='M15 35h31l-9 13H24z' fill='%23ff5e3a'/%3E%3Cpath d='M35 17v31' stroke='%230a1f12' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M27 23c8-10 19-8 23-2-6 6-16 8-23 2z' fill='%23ffe135'/%3E%3C/svg%3E"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -42,6 +48,14 @@
       <span class="confetti-dot dot-4"></span>
       <span class="confetti-dot dot-5"></span>
       <span class="confetti-dot dot-6"></span>
+      <span class="confetti-dot dot-7"></span>
+      <span class="confetti-dot dot-8"></span>
+      <span class="confetti-dot dot-9"></span>
+      <span class="confetti-dot dot-10"></span>
+      <span class="confetti-dot dot-11"></span>
+      <span class="confetti-dot dot-12"></span>
+      <span class="confetti-dot dot-13"></span>
+      <span class="confetti-dot dot-14"></span>
     </div>
 
     <div class="page-shell bubbles-shell">
@@ -55,40 +69,73 @@
         </a>
         <nav class="bubbles-nav-links" aria-label="Sekce stránky">
           <a href="#pribeh">O projektu</a>
-          <a href="#co-stavime">Co měníme</a>
+          <a href="#co-stavime">Co stavíme</a>
           <a href="#platba">Přispět</a>
         </nav>
-        <a class="btn bubbles-nav-cta" href="#platba">Přispět</a>
+        <a class="btn bubbles-nav-cta" href="#platba">Přispět teď</a>
       </header>
 
       <main>
         <section class="bubbles-hero" id="hero">
           <div class="bubbles-hero__copy">
             <div class="hero-badges" aria-label="Základní informace">
-              <span>Veřejná sbírka</span>
-              <span>600 m² pro děti</span>
-              <span>od 15. 5. 2026</span>
+              <span>🎉 veřejná sbírka</span>
+              <span>🌳 600 m² pro děti</span>
+              <span>📅 od 15. 5. 2026</span>
             </div>
 
             <p class="bubbles-kicker">Rekonstrukce hřiště V Mezihoří / U Pošty</p>
             <h1>
-              <span>Hřiště</span>
+              <span>HŘIŠTĚ</span>
               <span class="headline-slash" aria-hidden="true">/</span>
-              <span class="rainbow-text">U Pošty</span>
+              <span class="rainbow-text">U POŠTY</span>
             </h1>
             <p class="bubbles-hero__lead">
-              Obnovujeme veřejné dětské hřiště na Palmovce. Po letech provozu
-              potřebuje bezpečnější herní prvky, nové dopadové plochy a celkovou
-              úpravu prostoru.
+              Rekonstruujeme jediné veřejné hřiště Palmovky. Po letech provozu
+              potřebuje bezpečnější prvky, nové dopadové plochy a celkovou
+              revitalizaci.
             </p>
 
             <div class="hero-actions">
-              <a class="btn bubbles-primary-cta" href="#platba">Přispět na hřiště</a>
+              <a class="btn bubbles-primary-cta" href="#platba">Chci přispět</a>
               <a class="btn btn-secondary bubbles-secondary-cta" href="#pribeh">Co se chystá</a>
             </div>
+
+            <article class="bubbles-progress-card is-zero-state" id="fundraising-progress" aria-label="Stav sbírky">
+              <div class="progress-card__top">
+                <div>
+                  <small>Aktuálně vybráno</small>
+                  <strong id="vybrano-amount">
+                    Sbírka startuje 15. 5. 2026. Aktuální stav budeme
+                    zveřejňovat v týdenním rytmu.
+                  </strong>
+                </div>
+                <div class="amount-goal" id="cil-amount">Cíl: 1 600 000 Kč</div>
+              </div>
+              <div class="progress-track bubbles-progress-track" aria-hidden="true" hidden>
+                <div class="progress-bar" id="progress-bar"></div>
+              </div>
+              <div class="bubbles-progress-meta">
+                <div id="progress-percent-group" hidden>
+                  <strong id="progress-percent" hidden>Po prvních příspěvcích</strong>
+                  <span id="progress-percent-label"></span>
+                </div>
+                <div id="donor-count-group" hidden>
+                  <strong id="donor-count" hidden>Stav aktualizujeme ručně</strong>
+                  <span id="donor-count-label"></span>
+                </div>
+                <div>
+                  <span id="remaining-label">Cíl sbírky: </span>
+                  <strong id="remaining-amount">1 600 000 Kč</strong>
+                </div>
+              </div>
+              <p class="progress-note">
+                Pohyb na účtu je vidět ve veřejném náhledu transparentního účtu.
+              </p>
+            </article>
           </div>
 
-          <div class="bubbles-hero__visual" aria-label="Podklady k hřišti">
+          <div class="bubbles-hero__visual" aria-label="Vizualizace hřiště">
             <div class="photo-stack">
               <figure class="photo-card photo-card--main">
                 <img
@@ -105,74 +152,42 @@
                 />
                 <figcaption>Návrh dispozice v5</figcaption>
               </figure>
-              <span class="photo-sticker photo-sticker--sun">nově</span>
-              <span class="photo-sticker photo-sticker--heart">v5</span>
+              <span class="photo-sticker photo-sticker--sun">☀</span>
+              <span class="photo-sticker photo-sticker--heart">♥</span>
             </div>
           </div>
         </section>
 
-        <section class="section bubbles-section progress-section" id="fundraising-progress">
-          <div class="section-heading">
-            <p class="eyebrow">Stav sbírky</p>
-            <h2>Cíl sbírky je 1 600 000 Kč</h2>
-          </div>
-          <article class="bubbles-progress-card is-zero-state" aria-label="Stav sbírky">
-            <div class="progress-card__top">
-              <div>
-                <small>Aktuálně vybráno</small>
-                <strong id="vybrano-amount">
-                  Sbírka startuje 15. 5. 2026. Aktuální stav budeme
-                  zveřejňovat v týdenním rytmu.
-                </strong>
-              </div>
-              <div class="amount-goal" id="cil-amount">Cíl: 1 600 000 Kč</div>
-            </div>
-            <div class="progress-track bubbles-progress-track" aria-hidden="true" hidden>
-              <div class="progress-bar" id="progress-bar"></div>
-            </div>
-            <div class="bubbles-progress-meta">
-              <div id="progress-percent-group" hidden>
-                <strong id="progress-percent" hidden>Po prvních příspěvcích</strong>
-                <span id="progress-percent-label"></span>
-              </div>
-              <div id="donor-count-group" hidden>
-                <strong id="donor-count" hidden>Stav aktualizujeme ručně</strong>
-                <span id="donor-count-label"></span>
-              </div>
-              <div>
-                <span id="remaining-label">Cíl sbírky: </span>
-                <strong id="remaining-amount">1 600 000 Kč</strong>
-              </div>
-            </div>
-            <p class="progress-note">
-              Pohyb na účtu je veřejně vidět u ČSOB. Na webu budeme stav
-              průběžně přepisovat do srozumitelného přehledu.
-            </p>
-          </article>
-        </section>
+        <div class="bubbles-wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0 64l48-10.7C96 43 192 21 288 26.7 384 32 480 64 576 74.7 672 85 768 75 864 58.7 960 43 1056 21 1152 26.7 1248 32 1344 64 1392 80l48 16v24H0z"></path>
+          </svg>
+        </div>
 
         <section class="section bubbles-section story-bubbles" id="pribeh">
           <div class="section-heading">
-            <p class="eyebrow">Proč to děláme</p>
-            <h2>Hřiště slouží každý den. Teď potřebuje obnovu.</h2>
+            <p class="eyebrow">Proč sbíráme? 🤔</p>
+            <h2>Hřiště tu je. Jen už potřebuje pořádnou obnovu.</h2>
           </div>
           <div class="story-grid">
             <div class="story-copy">
               <p>
-                Hřiště na křižovatce ulic V Mezihoří a U Pošty je jedno z mála
-                otevřených míst pro malé děti přímo v této části Palmovky.
-                Po letech provozu už ale potřebuje zásadnější opravu.
+                Hřiště na křižovatce ulic V Mezihoří a U Pošty slouží dětem a
+                rodičům z okolí každý den. Je to jediný otevřený dětský prostor v
+                docházkové vzdálenosti pro rodiny z Palmovky a okolí Libně.
               </p>
               <p>
-                Sbírka je určena na rekonstrukci tohoto konkrétního hřiště:
-                bezpečnější prvky, dopadové plochy, mobiliář a úpravu prostoru.
+                Sbírka pomůže zaplatit rekonstrukci tohoto konkrétního místa:
+                nové herní prvky pro děti do 12 let, bezpečné dopadové plochy,
+                mobiliář a celkovou úpravu prostoru. Nejde o obecný fond ani
+                jiný projekt.
               </p>
             </div>
             <aside class="story-note bubbles-note">
-              <strong>Konkrétní místo</strong>
+              <strong>Konkrétní účel sbírky</strong>
               <p>
-                Veřejná sbírka se týká hřiště U Pošty / V Mezihoří v Praze 8.
-                Nejde o obecný fond ani jiný projekt.
+                Rekonstrukce hřiště na křižovatce ulic V Mezihoří a U Pošty v
+                Praze a jeho celková revitalizace.
               </p>
             </aside>
           </div>
@@ -180,43 +195,45 @@
 
         <section class="section bubbles-section build-section" id="co-stavime">
           <div class="section-heading">
-            <p class="eyebrow">Co se změní</p>
-            <h2>Jednoduchá, praktická obnova</h2>
+            <p class="eyebrow">Co stavíme 🛝</p>
+            <h2>Praktická obnova, ne velké gesto</h2>
           </div>
           <div class="build-grid">
             <article class="build-card build-card--green">
-              <span aria-hidden="true">↗</span>
+              <span>🧗</span>
               <h3>Herní prvky</h3>
-              <p>Nové prvky pro děti od nejmenších po školáky.</p>
+              <p>Nová sestava a prvky pro děti od nejmenších po školáky.</p>
             </article>
             <article class="build-card build-card--yellow">
-              <span aria-hidden="true">↧</span>
+              <span>🏖️</span>
               <h3>Dopadové plochy</h3>
               <p>Bezpečnější povrchy podle norem pro dětská hřiště.</p>
             </article>
             <article class="build-card build-card--blue">
-              <span aria-hidden="true">•</span>
-              <h3>Prostor a zeleň</h3>
-              <p>Přehlednější místo pro každodenní používání.</p>
+              <span>🌱</span>
+              <h3>Zeleň a prostor</h3>
+              <p>Přehlednější a příjemnější místo pro každodenní používání.</p>
             </article>
             <article class="build-card build-card--pink">
-              <span aria-hidden="true">+</span>
+              <span>🪑</span>
               <h3>Mobiliář</h3>
-              <p>Lavičky, oplocení a drobnosti, které hřiště potřebuje.</p>
+              <p>Lavičky, oplocení a drobnosti, bez kterých hřiště nefunguje dobře.</p>
             </article>
           </div>
         </section>
 
         <section class="section bubbles-section payment-section" id="platba">
           <div class="section-heading section-heading--center">
-            <p class="eyebrow">Jak přispět</p>
-            <h2>Dar můžete poslat převodem nebo QR platbou</h2>
+            <p class="eyebrow">Přispějte! 🙌</p>
+            <h2>Vyberte částku a pošlete dar převodem nebo QR platbou</h2>
           </div>
           <div class="bubbles-payment-grid">
             <article class="payment-bubble-card payment-bubble-card--transfer">
+              <span class="payment-card-emoji" aria-hidden="true">🏦</span>
               <h3>Transparentní účet</h3>
               <p class="microcopy card-intro">
-                Účet je zřízený pro veřejnou sbírku a vedený jako transparentní.
+                Dar můžete poslat běžným převodem. Účet je zřízený pro veřejnou
+                sbírku a je vedený jako transparentní.
               </p>
               <dl class="detail-list">
                 <div class="detail-item">
@@ -250,9 +267,10 @@
             </article>
 
             <article class="payment-bubble-card payment-bubble-card--qr">
+              <span class="payment-card-emoji" aria-hidden="true">📱</span>
               <h3>QR platba</h3>
               <p class="microcopy card-intro">
-                Vyberte částku a naskenujte QR kód ve své bankovní aplikaci.
+                Rychlá volba částky přegeneruje QR kód pro bankovní aplikaci.
               </p>
               <div class="donation-picker">
                 <div class="donation-buttons" role="group" aria-label="Rychlá volba částky daru">
@@ -293,8 +311,8 @@
 
         <section class="section bubbles-section transparency-summary" id="transparentnost">
           <div class="section-heading">
-            <p class="eyebrow">Transparentnost</p>
-            <h2>Základní informace na jednom místě</h2>
+            <p class="eyebrow">Transparentně ✍️</p>
+            <h2>Kdo sbírku pořádá a kde najdete dokumenty</h2>
           </div>
           <div class="transparency-grid">
             <div class="transparency-copy">
@@ -305,19 +323,23 @@
                 </div>
                 <div>
                   <dt>Účel</dt>
-                  <dd>Rekonstrukce hřiště U Pošty / V Mezihoří a jeho celková revitalizace.</dd>
+                  <dd>Rekonstrukce hřiště V Mezihoří / U Pošty a jeho celková revitalizace.</dd>
                 </div>
                 <div>
                   <dt>Účet</dt>
-                  <dd>Transparentní účet 369889612/0300 u ČSOB.</dd>
+                  <dd>369889612/0300, IBAN CZ32 0300 0000 0003 6988 9612, ČSOB</dd>
+                </div>
+                <div>
+                  <dt>Režijní náklady</dt>
+                  <dd>Maximálně 2,5 % čistého výtěžku veřejné sbírky.</dd>
                 </div>
               </dl>
             </div>
             <div class="document-panel bubbles-document-panel">
-              <h3>Dokumenty a ochrana údajů</h3>
+              <h3>Dokumenty a informace</h3>
               <p class="microcopy">
-                Přehled dokumentů, pravidla transparentního účtu a zásady ochrany
-                osobních údajů najdete na samostatné stránce.
+                Osvědčení sbírky, informace k transparentnímu účtu a zásady ochrany
+                osobních údajů držíme na jedné stránce.
               </p>
               <div
                 data-documents-list="compact"
@@ -340,9 +362,15 @@
           <div class="tax-text">
             <h3>Dar si můžete uplatnit v daních</h3>
             <p>
-              U fyzických osob se uplatňují dary nad 2 % základu daně nebo
-              alespoň 1 000 Kč za rok, u právnických osob dar od 2 000 Kč.
-              Rozhodující je vždy aktuální znění zákona o daních z příjmů.
+              U fyzických osob se uplatňují dary nad 2 % základu daně nebo alespoň
+              1 000 Kč za rok, u právnických osob dar od 2 000 Kč. Rozhodující je
+              vždy aktuální znění zákona o daních z příjmů.
+            </p>
+            <p>
+              Maximální odpočet činí 30 % základu daně u fyzických osob
+              (roky 2022–2026) i právnických osob (do února 2027). Tento limit
+              vychází z § 15 a § 20 zákona č. 586/1992 Sb., o daních z příjmů,
+              ve znění zákona č. 24/2025 Sb.
             </p>
             <p>
               Potvrzení vystavíme na žádost po ověření přijetí daru.
@@ -358,14 +386,14 @@
           </div>
           <p>
             Vyplňte krátký formulář na samostatné stránce. Potvrzení vystavujeme
-            po ověření přijetí daru.
+            po ověření přijetí daru na transparentní účet.
           </p>
           <a class="btn btn-secondary" href="potvrzeni-o-daru.html">Vyplnit žádost</a>
         </section>
 
         <section class="section bubbles-section faq-section" id="faq">
           <div class="section-heading">
-            <p class="eyebrow">FAQ</p>
+            <p class="eyebrow">FAQ 💬</p>
             <h2>Časté otázky</h2>
           </div>
           <div class="faq-list">
@@ -377,18 +405,18 @@
               </p>
             </details>
             <details>
-              <summary>Na co dary slouží?</summary>
+              <summary>Na co přesně dary slouží?</summary>
               <p>
-                Na rekonstrukci hřiště U Pošty / V Mezihoří v Praze 8 a jeho
-                celkovou revitalizaci.
+                Na rekonstrukci hřiště na křižovatce ulic V Mezihoří a U Pošty
+                v Praze a jeho celkovou revitalizaci.
               </p>
             </details>
             <details>
-              <summary>Jsou údaje o platbě veřejné?</summary>
+              <summary>Kde uvidím transparentní účet?</summary>
               <p>
-                Účet je transparentní, takže některé údaje o platbě mohou být
-                viditelné v náhledu banky.
-                <a class="inline-link" href="transparent-account.html">Více k transparentnímu účtu</a>.
+                Účet je vedený jako transparentní u ČSOB. Odkaz najdete v platební
+                části a na stránce
+                <a class="inline-link" href="transparent-account.html">Informace k transparentnímu účtu</a>.
               </p>
             </details>
             <details>
@@ -399,13 +427,41 @@
                 Potvrzení vystavíme po ověření přijetí daru.
               </p>
             </details>
+            <details>
+              <summary>Kdo bude hřiště provozovat po rekonstrukci?</summary>
+              <p>
+                Spolek pro správu a zvelebení dětského hřiště U Pošty na základě
+                smlouvy s vlastníkem pozemku. Součástí provozu bude provozní řád,
+                pravidelné kontroly a evidenční povinnosti podle platných norem
+                pro dětská hřiště.
+              </p>
+            </details>
+            <details>
+              <summary>Co když se nevybere celá částka?</summary>
+              <p>
+                Sbírka je konána na dobu neurčitou. Souběžně hledáme grantové
+                zdroje a příspěvek městské části. Pokud by se projekt z
+                objektivních důvodů neuskutečnil, spolek naloží s prostředky
+                podle pravidel veřejné sbírky podle zákona č. 117/2001 Sb.
+              </p>
+            </details>
+            <details>
+              <summary>Je sbírka osvědčená krajským úřadem?</summary>
+              <p>
+                Ano. Sbírka je osvědčena a začíná 15. 5. 2026. Osvědčení bude
+                zveřejněno na stránce
+                <a class="inline-link" href="transparency.html">
+                  Transparentnost a dokumenty
+                </a>.
+              </p>
+            </details>
           </div>
         </section>
       </main>
 
       <footer class="footer-card bubbles-footer">
         <div class="bubbles-footer__top">
-          <span class="bubbles-logo-mark" aria-hidden="true">UP</span>
+          <span class="bubbles-logo-mark" aria-hidden="true">✦</span>
           <div>
             <h3>Spolek pro správu a zvelebení dětského hřiště U Pošty</h3>
             <p>U Pošty 1474/1, Libeň, 180 00 Praha 8 • IČO: 22045082</p>
@@ -431,7 +487,9 @@
           </div>
           <div class="footer-item">
             <strong>Dokumenty</strong>
-            <p><a class="inline-link" href="transparency.html">Transparentnost a dokumenty</a></p>
+            <p>
+              <a class="inline-link" href="transparency.html">Transparentnost</a>
+            </p>
           </div>
         </div>
         <div class="footer-links">
@@ -442,10 +500,18 @@
             Informace k transparentnímu účtu
           </a>
         </div>
+        <div class="footer-legal-strip">
+          Pořadatel: Spolek pro správu a zvelebení dětského hřiště U Pošty •
+          IČO 22045082 • MS Praha, oddíl L, vložka 79560 • Účel: rekonstrukce
+          hřiště U Pošty, Praha 8 • Účet 369889612/0300 (ČSOB, transparentní) •
+          Sbírka osvědčená od 15. 5. 2026, na dobu neurčitou, území ČR.
+        </div>
         <p class="footer-legal">
-          Spolek je zapsán ve spolkovém rejstříku vedeném Městským soudem v Praze,
-          oddíl L, vložka 79560. Veřejná sbírka je konána od 15. 5. 2026 na dobu
-          neurčitou.
+          Veřejný náhled účtu, osvědčení sbírky a další základní dokumenty
+          najdete na stránce
+          <a class="inline-link" href="transparency.html">
+            Transparentnost a dokumenty
+          </a>.
         </p>
       </footer>
     </div>
