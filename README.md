@@ -14,8 +14,6 @@ Repo neobsahuje interní operátorský nástroj, ukázková data ani pracovní s
 ## Nasazení
 
 Web je čistý statický HTML/CSS/JS projekt bez buildu. GitHub Pages čte obsah z větve `main`.
-Veřejná část používá system sans typografii bez Google Fonts a bez dalších
-externích runtime skriptů mimo odkaz na transparentní účet banky.
 
 Doména je nastavena přes `CNAME`:
 
