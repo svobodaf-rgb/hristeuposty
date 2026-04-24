@@ -1,6 +1,3 @@
-/* TODO: Doplnit samohostované řezy Fraunces (500 a 700) do assets/fonts/. */
-/* TODO: Doplnit samohostované řezy Inter (400, 500 a 600) do assets/fonts/. */
-
 :root {
   --ink: #1a1e18;
   --paper: #faf7f0;
@@ -17,8 +14,8 @@
   --radius-sm: 8px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-heading: "Fraunces", Georgia, "Source Serif 4", serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --bg: var(--paper);
   --bg-strong: var(--paper);
   --leaf: var(--grass);
@@ -2137,7 +2134,7 @@ select:focus-visible,
   --bubble-shadow-pop: 0 20px 0 rgba(10, 31, 18, 0.1), 0 28px 70px rgba(10, 31, 18, 0.16);
   overflow-x: hidden;
   color: var(--bubble-ink);
-  font-family: "DM Sans", var(--font-body);
+  font-family: var(--font-body);
   background:
     radial-gradient(circle at 12% 8%, rgba(184, 247, 160, 0.72), transparent 24rem),
     radial-gradient(circle at 92% 18%, rgba(74, 200, 255, 0.44), transparent 24rem),
@@ -2153,7 +2150,7 @@ select:focus-visible,
 .bubbles-page h2,
 .bubbles-page h3 {
   color: var(--bubble-ink);
-  font-family: "Epilogue", "DM Sans", var(--font-heading);
+  font-family: var(--font-heading);
   letter-spacing: -0.065em;
 }
 
@@ -2264,7 +2261,7 @@ select:focus-visible,
 
 .bubbles-brand strong {
   display: block;
-  font-family: "Epilogue", "DM Sans", var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 1.02rem;
   letter-spacing: -0.04em;
 }
@@ -2319,7 +2316,7 @@ select:focus-visible,
   border-radius: 20px;
   background: var(--bubble-green);
   color: var(--bubble-ink);
-  font-family: "DM Sans", var(--font-body);
+  font-family: var(--font-body);
   font-weight: 900;
   box-shadow: 6px 7px 0 var(--bubble-ink);
   transition:
@@ -2692,7 +2689,7 @@ select:focus-visible,
 
 .bubbles-page .eyebrow {
   color: var(--bubble-green-dark);
-  font-family: "DM Sans", var(--font-body);
+  font-family: var(--font-body);
   font-weight: 900;
 }
 
@@ -2727,7 +2724,7 @@ select:focus-visible,
 }
 
 .bubbles-note strong {
-  font-family: "Epilogue", "DM Sans", var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 1.35rem;
   letter-spacing: -0.05em;
 }
@@ -2958,7 +2955,7 @@ select:focus-visible,
 
 .bubbles-page .qr-panel strong {
   color: var(--bubble-ink);
-  font-family: "Epilogue", "DM Sans", var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   letter-spacing: -0.04em;
 }
@@ -3756,5 +3753,188 @@ select:focus-visible,
 
   .photo-card--main {
     width: 100%;
+  }
+}
+
+/* Final review calibration: keep bubbles, lower noise by roughly one notch. */
+.bubbles-page {
+  --bubble-bg: #fbfcf4;
+  --bubble-ink: #132319;
+  --bubble-muted: #4d5f54;
+  --bubble-green: #24965b;
+  --bubble-green-dark: #17633a;
+  --bubble-yellow: #f2dc68;
+  --bubble-lime: #cfefae;
+  --bubble-coral: #e97355;
+  --bubble-blue: #7ccfe8;
+  --bubble-pink: #ecbed0;
+  --bubble-purple: #d7c7ef;
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(207, 239, 174, 0.48), transparent 24rem),
+    radial-gradient(circle at 92% 18%, rgba(124, 207, 232, 0.32), transparent 24rem),
+    radial-gradient(circle at 82% 82%, rgba(236, 190, 208, 0.26), transparent 22rem),
+    linear-gradient(180deg, #fffdf3 0%, var(--bubble-bg) 100%);
+}
+
+.bubbles-page h1,
+.bubbles-page h2,
+.bubbles-page h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.045em;
+}
+
+.bubbles-background {
+  opacity: 0.72;
+}
+
+.bubble-blob {
+  opacity: 0.82;
+}
+
+.confetti-dot {
+  opacity: 0.24;
+}
+
+.dot-21,
+.dot-22,
+.dot-23,
+.dot-24,
+.dot-25,
+.dot-26,
+.dot-27,
+.dot-28 {
+  display: none;
+}
+
+.bubbles-nav {
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.bubbles-logo-mark {
+  animation-duration: 14s;
+}
+
+.bubbles-page .bubbles-nav-cta,
+.hero-badges span {
+  animation: none;
+}
+
+.bubbles-page .btn {
+  border-width: 2px;
+  box-shadow: 4px 5px 0 rgba(10, 31, 18, 0.75);
+}
+
+.bubbles-page .btn:hover,
+.bubbles-page .btn:focus-visible {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 7px 0 rgba(10, 31, 18, 0.75);
+}
+
+.bubbles-hero {
+  padding-top: 52px;
+}
+
+.hero-badges span {
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.bubbles-hero h1 {
+  font-size: clamp(5rem, 8.8vw, 118px);
+  letter-spacing: -0.055em;
+  text-transform: none;
+}
+
+.rainbow-text {
+  background: linear-gradient(90deg, var(--bubble-green), var(--bubble-blue), var(--bubble-pink), var(--bubble-yellow));
+  background-size: 220% 220%;
+  animation-duration: 7s;
+}
+
+.bubbles-hero__lead {
+  color: var(--bubble-muted);
+  font-weight: 520;
+}
+
+.progress-section {
+  background:
+    radial-gradient(circle at 88% 0%, rgba(207, 239, 174, 0.42), transparent 14rem),
+    #fff;
+}
+
+.progress-section .section-heading {
+  margin-bottom: 22px;
+}
+
+.progress-section .bubbles-progress-card {
+  max-width: none;
+}
+
+.bubbles-progress-card,
+.payment-bubble-card,
+.build-card,
+.bubbles-page .section,
+.bubbles-page .tax-card,
+.bubbles-page .confirmation-teaser,
+.bubbles-page .footer-card {
+  border-width: 3px;
+  box-shadow: 7px 8px 0 rgba(10, 31, 18, 0.78);
+}
+
+.photo-card--main {
+  transform: rotate(-2.6deg);
+}
+
+.photo-card--plan {
+  transform: rotate(4deg);
+}
+
+.photo-sticker--heart {
+  display: none;
+}
+
+.photo-sticker--sun {
+  animation-duration: 16s;
+}
+
+.bubbles-wave {
+  color: #fff;
+}
+
+.build-card:nth-child(odd) {
+  transform: rotate(-0.8deg);
+}
+
+.build-card:nth-child(even) {
+  transform: rotate(0.8deg);
+}
+
+.payment-bubble-card--transfer,
+.payment-bubble-card--qr {
+  transform: rotate(0deg);
+}
+
+.payment-bubble-card--qr {
+  background: linear-gradient(135deg, rgba(242, 220, 104, 0.9) 0%, rgba(207, 239, 174, 0.92) 100%);
+}
+
+.bubbles-page .faq-list details:nth-of-type(n + 5) {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .bubbles-hero h1 {
+    font-size: clamp(3.8rem, 16vw, 5rem);
+  }
+
+  .dot-13,
+  .dot-14,
+  .dot-15,
+  .dot-16,
+  .dot-17,
+  .dot-18,
+  .dot-19,
+  .dot-20 {
+    display: none;
   }
 }
