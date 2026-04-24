@@ -1,15 +1,37 @@
-# hristeuposty.cz
+# Hřiště U Pošty — veřejný web
 
-Verejny staticky web pro sbirku projektu Jedine hriste Palmovky.
+Toto je veřejný statický deploy webu pro doménu `www.hristeuposty.cz`.
 
-Toto repo je cisty public deploy pro GitHub Pages. Pracovni zdrojovy repozitar zustava soukromy.
+Web obsahuje:
 
-Obsahuje pouze verejnou cast webu:
+- veřejný onepager sbírky,
+- samostatnou stránku žádosti o potvrzení daru,
+- informační stránky k transparentnímu účtu, ochraně osobních údajů a dokumentům sbírky,
+- veřejné CSS, JS a obrazové assety potřebné pro provoz webu.
 
-- hlavni onepager,
-- verejne informacni podstranky,
-- formular zadosti o potvrzeni o daru,
-- verejne assety a skripty potrebne pro beh webu,
-- `CNAME` pro `www.hristeuposty.cz`.
+Repo neobsahuje interní operátorský nástroj, ukázková data ani pracovní soubory.
 
-Neobsahuje lokalni operatorsky nastroj, testovaci data ani interni pracovni soubory.
+## Nasazení
+
+Web je čistý statický HTML/CSS/JS projekt bez buildu. GitHub Pages čte obsah z větve `main`.
+
+Doména je nastavena přes `CNAME`:
+
+```text
+www.hristeuposty.cz
+```
+
+## Veřejné stránky
+
+- `index.html`
+- `potvrzeni-o-daru.html`
+- `transparency.html`
+- `transparent-account.html`
+- `privacy.html`
+- `osvedceni-verejna-sbirka.html`
+- `vyuctovani-prubezne.html`
+- `vyuctovani-konecne.html`
+
+## Poznámka
+
+Veřejný web nepoužívá backend, databázi ani serverové ukládání formulářů. Platební QR kód se generuje lokálně v prohlížeči.
