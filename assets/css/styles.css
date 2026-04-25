@@ -1,6 +1,3 @@
-/* TODO: Doplnit samohostované řezy Fraunces (500 a 700) do assets/fonts/. */
-/* TODO: Doplnit samohostované řezy Inter (400, 500 a 600) do assets/fonts/. */
-
 :root {
   --ink: #1a1e18;
   --paper: #faf7f0;
@@ -16,17 +13,8 @@
   --radius-md: 10px;
   --radius-sm: 8px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04);
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-heading: "Fraunces", Georgia, "Source Serif 4", serif;
-  --bg: var(--paper);
-  --bg-strong: var(--paper);
-  --leaf: var(--grass);
-  --leaf-dark: var(--grass-dark);
-  --leaf-soft: rgba(63, 107, 46, 0.08);
-  --wood: var(--muted);
-  --clay: var(--brick);
-  --sun: var(--sand);
 }
 
 * {
@@ -164,7 +152,7 @@ img {
 .eyebrow,
 .hero-kicker {
   margin: 0 0 10px;
-  color: var(--wood);
+  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -399,7 +387,7 @@ p {
   height: 11px;
   margin-top: 8px;
   border-radius: 50%;
-  background: var(--leaf);
+  background: var(--grass);
 }
 
 .story-note {
@@ -422,7 +410,7 @@ p {
 .footer-card {
   border-radius: var(--radius-lg);
   background: var(--paper-soft);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow);
 }
 
 .progress-card,
@@ -446,7 +434,7 @@ p {
 
 .amount-display small,
 .detail-item dt {
-  color: var(--wood);
+  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.11em;
@@ -634,8 +622,8 @@ p {
 
 .amount-button.is-active {
   border-color: rgba(79, 125, 59, 0.35);
-  background: var(--leaf-soft);
-  color: var(--leaf-dark);
+  background: rgba(63, 107, 46, 0.08);
+  color: var(--grass-dark);
 }
 
 .custom-amount {
@@ -739,7 +727,7 @@ select:focus-visible,
 }
 
 .fact-list dt {
-  color: var(--wood);
+  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.11em;
@@ -825,7 +813,7 @@ select:focus-visible,
 
 .document-meta {
   display: block;
-  color: var(--wood);
+  color: var(--muted);
   font-size: 0.84rem;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -871,7 +859,7 @@ select:focus-visible,
 }
 
 .document-list a {
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
   font-weight: 800;
   text-underline-offset: 3px;
 }
@@ -889,8 +877,8 @@ select:focus-visible,
   width: fit-content;
   padding: 4px 9px;
   border-radius: 999px;
-  background: var(--leaf-soft);
-  color: var(--leaf-dark);
+  background: rgba(63, 107, 46, 0.08);
+  color: var(--grass-dark);
   font-size: 0.78rem;
   font-weight: 800;
 }
@@ -947,7 +935,7 @@ select:focus-visible,
 
 .back-link {
   width: fit-content;
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
   font-weight: 800;
   text-underline-offset: 3px;
 }
@@ -964,7 +952,7 @@ select:focus-visible,
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow);
 }
 
 .legal-card ul {
@@ -977,12 +965,12 @@ select:focus-visible,
 }
 
 .legal-card li::marker {
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
 }
 
 .notice-box {
   padding: 18px;
-  border-left: 4px solid var(--leaf);
+  border-left: 4px solid var(--grass);
   border-radius: 18px;
   background: rgba(223, 234, 210, 0.72);
 }
@@ -1018,7 +1006,7 @@ select:focus-visible,
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--paper-soft);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow);
 }
 
 .confirmation-teaser h3 {
@@ -1101,7 +1089,7 @@ select:focus-visible,
   margin: 0;
   padding: 0;
   flex: 0 0 auto;
-  accent-color: var(--leaf);
+  accent-color: var(--grass);
 }
 
 .choice-option span {
@@ -1132,7 +1120,7 @@ select:focus-visible,
 }
 
 .required-mark {
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
 }
 
 .field-optional {
@@ -1170,7 +1158,7 @@ select:focus-visible,
   min-height: 20px;
   margin-top: 2px;
   padding: 0;
-  accent-color: var(--leaf);
+  accent-color: var(--grass);
 }
 
 .form-actions {
@@ -1247,7 +1235,7 @@ select:focus-visible,
 }
 
 .summary-list dt {
-  color: var(--wood);
+  color: var(--muted);
   font-size: 0.83rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -1270,7 +1258,7 @@ select:focus-visible,
 }
 
 .operator-list li::marker {
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
 }
 
 .request-machine {
@@ -1299,7 +1287,7 @@ select:focus-visible,
 
 .copy-feedback {
   min-height: 1.4em;
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
   font-size: 0.94rem;
   font-weight: 700;
 }
@@ -1307,7 +1295,7 @@ select:focus-visible,
 .form-success {
   min-height: 1.6em;
   margin-top: 18px;
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
   font-weight: 800;
 }
 
@@ -1320,7 +1308,7 @@ select:focus-visible,
 }
 
 .inline-link {
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
   font-weight: 800;
   text-underline-offset: 3px;
 }
@@ -1371,7 +1359,7 @@ select:focus-visible,
 
 .status-pill--muted {
   background: rgba(232, 237, 229, 0.9);
-  color: var(--wood);
+  color: var(--muted);
 }
 
 .status-pill--warm {
@@ -1381,7 +1369,7 @@ select:focus-visible,
 
 .status-pill--good {
   background: rgba(223, 234, 210, 0.92);
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
 }
 
 .status-pill--danger {
@@ -1502,7 +1490,7 @@ select:focus-visible,
   border: 1px solid rgba(33, 62, 42, 0.12);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow);
 }
 
 .ops-stat-card strong {
@@ -1513,7 +1501,7 @@ select:focus-visible,
 }
 
 .ops-stat-label {
-  color: var(--wood);
+  color: var(--muted);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -1572,7 +1560,7 @@ select:focus-visible,
 
 .ops-feedback {
   min-height: 1.45em;
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
   font-size: 0.94rem;
   font-weight: 700;
 }
@@ -1732,7 +1720,7 @@ select:focus-visible,
   padding: 5px 10px;
   border-radius: 999px;
   background: rgba(230, 240, 223, 0.8);
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -1817,7 +1805,7 @@ select:focus-visible,
   min-height: 18px;
   margin: 0;
   padding: 0;
-  accent-color: var(--leaf);
+  accent-color: var(--grass);
 }
 
 .ops-small-button {
@@ -1873,7 +1861,7 @@ select:focus-visible,
 }
 
 .ops-score-chip strong {
-  color: var(--leaf-dark);
+  color: var(--grass-dark);
 }
 
 .ops-notes-block {
@@ -2425,15 +2413,10 @@ select:focus-visible,
   text-wrap: balance;
 }
 
-.rainbow-text {
+.hero-h1-accent {
   display: inline-block;
   width: fit-content;
-  background: linear-gradient(90deg, var(--bubble-green), var(--bubble-blue), var(--bubble-pink), var(--bubble-coral), var(--bubble-yellow), var(--bubble-green));
-  background-size: 260% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow 5s linear infinite;
+  color: var(--bubble-coral);
 }
 
 .headline-slash {
@@ -3135,11 +3118,6 @@ select:focus-visible,
   }
 }
 
-@keyframes rainbow {
-  to {
-    background-position: 260% 0;
-  }
-}
 
 @media (max-width: 1060px) {
   .bubbles-hero {
@@ -3565,13 +3543,8 @@ select:focus-visible,
   display: block;
 }
 
-.rainbow-text {
-  background: linear-gradient(90deg, var(--bubble-green), var(--bubble-blue), var(--bubble-pink), var(--bubble-yellow));
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow 4s ease infinite;
+.hero-h1-accent {
+  color: var(--bubble-coral);
 }
 
 .bubbles-hero__lead {
@@ -3609,8 +3582,6 @@ select:focus-visible,
 
 .bubbles-progress-track .progress-bar {
   background: linear-gradient(90deg, var(--bubble-green), var(--bubble-blue), var(--bubble-pink));
-  background-size: 200% 100%;
-  animation: rainbow 3s ease infinite;
 }
 
 .photo-stack {
@@ -3722,17 +3693,6 @@ select:focus-visible,
   }
 }
 
-@keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 @media (max-width: 780px) {
   .bubbles-nav,

@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="light" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
     />
     <meta
       http-equiv="Permissions-Policy"
@@ -25,12 +25,6 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="cs_CZ" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Epilogue:wght@800;900&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23fff8dd'/%3E%3Ccircle cx='20' cy='42' r='8' fill='%231db96a'/%3E%3Cpath d='M15 35h31l-9 13H24z' fill='%23ff5e3a'/%3E%3Cpath d='M35 17v31' stroke='%230a1f12' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M27 23c8-10 19-8 23-2-6 6-16 8-23 2z' fill='%23ffe135'/%3E%3C/svg%3E"
@@ -86,7 +80,7 @@
           <a href="#co-stavime">Co stavíme</a>
           <a href="#platba">Přispět</a>
         </nav>
-        <a class="btn bubbles-nav-cta" href="#platba">Přispět! 🚀</a>
+        <a class="btn bubbles-nav-cta" href="#platba">Přispět</a>
       </header>
 
       <main>
@@ -94,24 +88,24 @@
           <div class="bubbles-hero__copy">
             <div class="hero-badges" aria-label="Základní informace">
               <span>🎉 Sbíráme</span>
-              <span>💰 Cíl 1,6 mil. Kč</span>
-              <span>🌳 Od 15. 5. 2026</span>
+              <span>💰 Cíl 2 000 000 Kč</span>
             </div>
 
             <p class="bubbles-kicker">Rekonstrukce hřiště V Mezihoří / U Pošty</p>
             <h1>
               <span>HŘIŠTĚ</span>
-              <span class="rainbow-text">U POŠTY</span>
+              <span class="hero-h1-accent">U POŠTY</span>
             </h1>
+            <p class="hero-card-subtitle">Jediné hřiště Palmovky</p>
             <p class="bubbles-hero__lead">
               Obnovujeme hřiště pro děti na Palmovce. Každý dar pomůže
               bezpečnějším prvkům, novým dopadovým plochám a celkové
-              revitalizaci. 🧒🛝💪
+              revitalizaci.
             </p>
 
             <div class="hero-actions">
-              <a class="btn bubbles-primary-cta" href="#platba">Chci přispět! 🚀</a>
-              <a class="btn btn-secondary bubbles-secondary-cta" href="#pribeh">Co stavíme 🛝</a>
+              <a class="btn bubbles-primary-cta" href="#platba">Chci přispět</a>
+              <a class="btn btn-secondary bubbles-secondary-cta" href="#pribeh">Co stavíme</a>
             </div>
 
             <article class="bubbles-progress-card is-zero-state" id="fundraising-progress" aria-label="Stav sbírky">
@@ -123,7 +117,7 @@
                     zveřejňovat v týdenním rytmu.
                   </strong>
                 </div>
-                <div class="amount-goal" id="cil-amount">Cíl: 1 600 000 Kč</div>
+                <div class="amount-goal" id="cil-amount">Cíl: 2 000 000 Kč</div>
               </div>
               <div class="progress-track bubbles-progress-track" aria-hidden="true" hidden>
                 <div class="progress-bar" id="progress-bar"></div>
@@ -139,7 +133,7 @@
                 </div>
                 <div>
                   <span id="remaining-label">Cíl sbírky: </span>
-                  <strong id="remaining-amount">1 600 000 Kč</strong>
+                  <strong id="remaining-amount">2 000 000 Kč</strong>
                 </div>
               </div>
               <p class="progress-note">
@@ -179,7 +173,7 @@
 
         <section class="section bubbles-section story-bubbles" id="pribeh">
           <div class="section-heading">
-            <p class="eyebrow">Proč sbíráme? 🤔</p>
+            <p class="eyebrow">Proč sbíráme</p>
             <h2>Hřiště tu je. Jen už potřebuje pořádnou obnovu.</h2>
           </div>
           <div class="story-grid">
@@ -208,7 +202,7 @@
 
         <section class="section bubbles-section build-section" id="co-stavime">
           <div class="section-heading">
-            <p class="eyebrow">Co stavíme 🛝</p>
+            <p class="eyebrow">Co stavíme</p>
             <h2>Praktická obnova, ne velké gesto</h2>
           </div>
           <div class="build-grid">
@@ -237,7 +231,7 @@
 
         <section class="section bubbles-section payment-section" id="platba">
           <div class="section-heading section-heading--center">
-            <p class="eyebrow">Přispějte! 🙌</p>
+            <p class="eyebrow">Přispět</p>
             <h2>Vyberte částku a pošlete dar převodem nebo QR platbou</h2>
           </div>
           <div class="bubbles-payment-grid">
@@ -324,7 +318,7 @@
 
         <section class="section bubbles-section transparency-summary" id="transparentnost">
           <div class="section-heading">
-            <p class="eyebrow">Transparentně ✍️</p>
+            <p class="eyebrow">Transparentnost</p>
             <h2>Kdo sbírku pořádá a kde najdete dokumenty</h2>
           </div>
           <div class="transparency-grid">
@@ -406,7 +400,7 @@
 
         <section class="section bubbles-section faq-section" id="faq">
           <div class="section-heading">
-            <p class="eyebrow">FAQ 💬</p>
+            <p class="eyebrow">FAQ</p>
             <h2>Časté otázky</h2>
           </div>
           <div class="faq-list">
@@ -438,15 +432,6 @@
                 Přes samostatný formulář
                 <a class="inline-link" href="potvrzeni-o-daru.html">Žádost o potvrzení o daru</a>.
                 Potvrzení vystavíme po ověření přijetí daru.
-              </p>
-            </details>
-            <details>
-              <summary>Kdo bude hřiště provozovat po rekonstrukci?</summary>
-              <p>
-                Spolek pro správu a zvelebení dětského hřiště U Pošty na základě
-                smlouvy s vlastníkem pozemku. Součástí provozu bude provozní řád,
-                pravidelné kontroly a evidenční povinnosti podle platných norem
-                pro dětská hřiště.
               </p>
             </details>
             <details>
@@ -529,6 +514,7 @@
       </footer>
     </div>
 
+    <script defer src="assets/js/confirmations-templates.js"></script>
     <script defer src="assets/js/confirmations-shared.js"></script>
     <script defer src="assets/js/documents.js"></script>
     <script defer src="assets/js/app.js"></script>
