@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow,noarchive,noimageindex" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+    />
+    <title>Žádost o potvrzení o daru | Jediné hřiště Palmovky</title>
+    <meta
+      name="description"
+      content="Formulář žádosti o potvrzení o daru pro veřejnou sbírku Jediné hřiště Palmovky."
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="heyhi-subpage">
+    <svg class="heart-symbols" width="0" height="0" aria-hidden="true">
+      <defs>
+        <symbol id="heart-symbol" viewBox="0 0 32 28">
+          <path
+            d="M16,26 C16,26 2,16 2,9 C2,4.5 5.5,1 10,1 C13,1 15.5,2.5 16,5 C16.5,2.5 19,1 22,1 C26.5,1 30,4.5 30,9 C30,16 16,26 16,26 Z"
+            fill="currentColor"
+            stroke="var(--ink)"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="heyhi-confetti" aria-hidden="true">
+      <svg class="heart heart--1" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--2" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--3" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--4" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--5" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--6" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--7" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--8" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--9" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--10" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--11" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--12" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--13" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--14" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--15" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--16" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--17" aria-hidden="true"><use href="#heart-symbol" /></svg>
+      <svg class="heart heart--18" aria-hidden="true"><use href="#heart-symbol" /></svg>
+    </div>
+    <div class="subpage-shell confirmation-page-shell">
+      <header class="subpage-header">
+        <a class="back-link" href="index.html">Zpět na hlavní stránku</a>
+        <div>
+          <p class="eyebrow">Potvrzení o daru</p>
+          <h1>Žádost o potvrzení o daru</h1>
+        </div>
+      </header>
+
+      <main class="legal-page">
+        <section class="legal-card">
+          <h2>Než formulář vyplníte</h2>
+          <p>
+            Potvrzení vystavujeme na žádost po ověření přijetí daru na
+            transparentním účtu. Vyplňte jen údaje potřebné k dohledání platby
+            a vystavení potvrzení.
+          </p>
+          <p>
+            Pokud dar nepůjde jednoznačně dohledat, můžeme vás kontaktovat kvůli
+            upřesnění. U transparentního účtu mohou být údaje o platbě veřejně
+            viditelné podle pravidel banky.
+          </p>
+        </section>
+
+        <section class="form-card" id="potvrzeni-o-daru">
+          <div class="section-heading">
+            <p class="eyebrow">Formulář</p>
+            <h2>Připravit žádost</h2>
+            <p class="form-intro">
+              Po odeslání se v prohlížeči připraví souhrn žádosti, předvyplněný
+              e-mail a data pro ruční zpracování. Nic se neposílá automaticky.
+            </p>
+          </div>
+
+          <form id="confirmation-form" novalidate>
+            <div class="form-mode-grid">
+              <fieldset class="choice-card">
+                <legend>Jsem</legend>
+                <div class="choice-options">
+                  <label class="choice-option">
+                    <input
+                      type="radio"
+                      name="applicantKind"
+                      value="person"
+                      checked
+                    />
+                    <span>fyzická osoba</span>
+                  </label>
+                  <label class="choice-option">
+                    <input
+                      type="radio"
+                      name="applicantKind"
+                      value="company"
+                    />
+                    <span>právnická osoba</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="choice-card">
+                <legend>Potřebuji potvrzení</legend>
+                <div class="choice-options">
+                  <label class="choice-option">
+                    <input
+                      type="radio"
+                      name="requestKind"
+                      value="single"
+                      checked
+                    />
+                    <span>pro jednotlivý dar</span>
+                  </label>
+                  <label class="choice-option">
+                    <input
+                      type="radio"
+                      name="requestKind"
+                      value="annual"
+                    />
+                    <span>souhrnně za kalendářní rok</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-stack">
+              <section class="form-section-card">
+                <div class="form-section-head">
+                  <h3 id="identity-heading">Údaje dárce</h3>
+                  <p class="field-hint">
+                    Povinná pole jsou označena hvězdičkou. Stačí minimum údajů
+                    potřebných pro vystavení potvrzení.
+                  </p>
+                </div>
+                <div class="form-grid">
+                  <div class="form-field" data-applicant-only="person">
+                    <label for="person-first-name">Jméno <span class="required-mark">*</span></label>
+                    <input
+                      id="person-first-name"
+                      name="personFirstName"
+                      autocomplete="given-name"
+                      data-required-when-visible="true"
+                    />
+                  </div>
+                  <div class="form-field" data-applicant-only="person">
+                    <label for="person-last-name">Příjmení <span class="required-mark">*</span></label>
+                    <input
+                      id="person-last-name"
+                      name="personLastName"
+                      autocomplete="family-name"
+                      data-required-when-visible="true"
+                    />
+                  </div>
+                  <div class="form-field full is-hidden" data-applicant-only="company">
+                    <label for="company-name">Název společnosti / organizace <span class="required-mark">*</span></label>
+                    <input
+                      id="company-name"
+                      name="companyName"
+                      autocomplete="organization"
+                      data-required-when-visible="true"
+                    />
+                  </div>
+                  <div class="form-field is-hidden" data-applicant-only="company">
+                    <label for="company-ico">IČO <span class="required-mark">*</span></label>
+                    <input
+                      id="company-ico"
+                      name="companyIco"
+                      inputmode="numeric"
+                      data-required-when-visible="true"
+                    />
+                  </div>
+                  <div class="form-field is-hidden" data-applicant-only="company">
+                    <label for="company-contact-person">Kontaktní osoba <span class="field-optional">nepovinné</span></label>
+                    <input
+                      id="company-contact-person"
+                      name="companyContactPerson"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="form-field is-hidden" data-applicant-only="person">
+                    <label for="person-birth-date">Datum narození <span class="field-optional">nepovinné</span></label>
+                    <input
+                      id="person-birth-date"
+                      name="personBirthDate"
+                      type="date"
+                    />
+                  </div>
+                  <div class="form-field full">
+                    <label for="address-street">Ulice a číslo <span class="required-mark">*</span></label>
+                    <input
+                      id="address-street"
+                      name="addressStreet"
+                      autocomplete="address-line1"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label for="address-city">Město / obec <span class="required-mark">*</span></label>
+                    <input
+                      id="address-city"
+                      name="addressCity"
+                      autocomplete="address-level2"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label for="address-postal-code">PSČ <span class="required-mark">*</span></label>
+                    <input
+                      id="address-postal-code"
+                      name="addressPostalCode"
+                      autocomplete="postal-code"
+                      inputmode="numeric"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-email">E-mail <span class="required-mark">*</span></label>
+                    <input
+                      id="contact-email"
+                      name="contactEmail"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-phone">Telefon <span class="field-optional">nepovinné</span></label>
+                    <input
+                      id="contact-phone"
+                      name="contactPhone"
+                      type="tel"
+                      autocomplete="tel"
+                    />
+                  </div>
+                  <div class="form-field full">
+                    <label for="payer-account-name" id="payer-account-name-label">
+                      Jméno plátce na účtu, pokud se liší od dárce
+                      <span class="field-optional">nepovinné</span>
+                    </label>
+                    <input
+                      id="payer-account-name"
+                      name="payerAccountName"
+                      autocomplete="name"
+                    />
+                  </div>
+                </div>
+              </section>
+
+              <section class="form-section-card">
+                <div class="form-section-head">
+                  <h3 id="request-heading">Údaje k dohledání platby</h3>
+                  <p class="field-hint" id="request-mode-hint">
+                    Vyplňte částku a přibližné datum platby. VS, zpráva pro
+                    příjemce nebo jméno plátce mohou pomoci s ověřením daru.
+                  </p>
+                </div>
+                <div class="form-grid">
+                  <div class="form-field" data-request-only="single">
+                    <label for="single-amount">Výše daru v Kč <span class="required-mark">*</span></label>
+                    <input
+                      id="single-amount"
+                      name="singleAmount"
+                      type="number"
+                      min="1"
+                      step="1"
+                      inputmode="numeric"
+                      data-required-when-visible="true"
+                    />
+                  </div>
+                  <div class="form-field" data-request-only="single">
+                    <label for="single-payment-date">Přibližné datum platby <span class="required-mark">*</span></label>
+                    <input
+                      id="single-payment-date"
+                      name="singlePaymentDate"
+                      type="date"
+                      data-required-when-visible="true"
+                    />
+                  </div>
+                  <div class="form-field" data-request-only="single">
+                    <label for="single-variable-symbol">Variabilní symbol <span class="field-optional">nepovinné</span></label>
+                    <input
+                      id="single-variable-symbol"
+                      name="singleVariableSymbol"
+                      inputmode="numeric"
+                      placeholder="Pokud jste ho použili"
+                    />
+                  </div>
+                  <div class="form-field" data-request-only="single">
+                    <label for="single-payment-message">Zpráva pro příjemce <span class="field-optional">nepovinné</span></label>
+                    <input
+                      id="single-payment-message"
+                      name="singlePaymentMessage"
+                      placeholder="Např. dar na hřiště"
+                    />
+                  </div>
+                  <div class="form-field full" data-request-only="single">
+                    <label for="single-request-note" id="single-request-note-label">
+                      Poznámka k dohledání daru <span class="field-optional">nepovinné</span>
+                    </label>
+                    <textarea
+                      id="single-request-note"
+                      name="singleRequestNote"
+                      rows="3"
+                      placeholder="Např. platba odešla z účtu partnera nebo z firemního účtu"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-field is-hidden" data-request-only="annual">
+                    <label for="annual-calendar-year">Rok, za který potvrzení požadujete <span class="required-mark">*</span></label>
+                    <input
+                      id="annual-calendar-year"
+                      name="annualCalendarYear"
+                      type="number"
+                      min="2026"
+                      step="1"
+                      inputmode="numeric"
+                      placeholder="Např. 2026"
+                      data-required-when-visible="true"
+                    />
+                  </div>
+                  <div class="form-field full is-hidden" data-request-only="annual">
+                    <label for="annual-request-note">
+                      Poznámka k žádosti <span class="field-optional">nepovinné</span>
+                    </label>
+                    <textarea
+                      id="annual-request-note"
+                      name="annualRequestNote"
+                      rows="3"
+                      placeholder="Např. dar byl posílán z účtu jiné osoby nebo z více plateb"
+                    ></textarea>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <label class="checkbox-field" for="privacy-consent">
+              <input id="privacy-consent" name="privacyConsent" type="checkbox" required />
+              <span>
+                Beru na vědomí, že potvrzení vystavujete až po ověření přijetí daru
+                a že mě v případě nejasností můžete kontaktovat. U transparentního
+                účtu mohou být údaje o platbě veřejně viditelné. Podrobnosti jsou
+                v
+                <a class="inline-link" id="transparent-account-link-form" href="transparent-account.html">
+                  informacích k transparentnímu účtu
+                </a>
+                a
+                <a class="inline-link" id="gdpr-policy-link-form" href="privacy.html">
+                  zásadách ochrany osobních údajů
+                </a>.
+              </span>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Připravit žádost</button>
+              <a
+                class="btn btn-secondary is-hidden"
+                id="mailto-link"
+                href="mailto:hristeuposty@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Otevřít předvyplněný e-mail
+              </a>
+              <button
+                class="btn btn-secondary is-hidden"
+                id="copy-summary-button"
+                type="button"
+              >
+                Zkopírovat souhrn žádosti
+              </button>
+              <button
+                class="btn btn-secondary is-hidden"
+                id="download-json-button"
+                type="button"
+              >
+                Stáhnout data žádosti
+              </button>
+            </div>
+
+            <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+            <p class="form-note">
+              Pro přesnější dohledání platby pomáhá VS, zpráva pro příjemce nebo
+              jméno plátce, pokud se liší. Do zprávy pro příjemce neuvádějte
+              zbytečné osobní údaje.
+            </p>
+
+            <div class="request-output is-hidden" id="request-output">
+              <div class="request-preview-grid">
+                <article class="request-preview-card">
+                  <h3>Přehled žádosti</h3>
+                  <div class="request-summary" id="request-summary"></div>
+                </article>
+                <article class="request-preview-card">
+                  <h3>Co bude následovat</h3>
+                  <ul class="operator-list" id="operator-checklist"></ul>
+                </article>
+              </div>
+              <details class="request-machine">
+                <summary>Data žádosti pro ruční zpracování</summary>
+                <pre id="request-payload"></pre>
+              </details>
+              <p class="copy-feedback" id="copy-feedback" aria-live="polite"></p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script defer src="assets/js/confirmations-templates.js"></script>
+    <script defer src="assets/js/confirmations-shared.js"></script>
+    <script defer src="assets/js/donation-confirmation-form.js"></script>
+  </body>
+</html>
