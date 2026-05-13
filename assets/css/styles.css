@@ -5712,20 +5712,20 @@ select:focus-visible,
 
 .heyhi-page .hero-title-word .hl,
 .heyhi-page .section-word .hl {
-  font-size: calc(var(--size, 80px) * 0.8);
+  font-size: calc(var(--size, 80px) * 0.68);
 }
 
 .heyhi-page .compact-header h2,
 .heyhi-page .tax-inner h2,
 .heyhi-page .confirmation-card h2,
 .heyhi-page .faq-block h2 {
-  font-size: clamp(2.25rem, 4.8vw, 4.15rem);
+  font-size: clamp(1.9rem, 4.1vw, 3.55rem);
 }
 
 .heyhi-page .build-title,
 .heyhi-page .pay-card-title,
 .heyhi-page .trust-card h3 {
-  font-size: clamp(1.6rem, 2.8vw, 1.95rem);
+  font-size: clamp(1.35rem, 2.4vw, 1.65rem);
 }
 
 .heyhi-page .hero-intro,
@@ -5734,19 +5734,24 @@ select:focus-visible,
 .heyhi-page .progress-foot,
 .heyhi-page .progress-note,
 .heyhi-page .footer-meta {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+}
+
+.heyhi-page #vybrano-amount,
+.heyhi-page #progress-percent {
+  font-size: 1rem;
 }
 
 .heyhi-page .hero-subtitle {
-  font-size: clamp(1.5rem, 2.3vw, 1.9rem);
+  font-size: clamp(0.98rem, 1.45vw, 1.15rem);
 }
 
 .heyhi-page .proc-text p {
-  font-size: clamp(1.3rem, 2.05vw, 1.7rem);
+  font-size: 0.92rem;
 }
 
 .heyhi-page .proc-text p + p {
-  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+  font-size: 0.92rem;
 }
 
 .heyhi-page .build-desc,
@@ -5756,20 +5761,20 @@ select:focus-visible,
 .heyhi-page .confirmation-card p,
 .heyhi-page .faq-list p,
 .heyhi-page .payment-note {
-  font-size: 1.06rem;
+  font-size: 0.92rem;
 }
 
 .heyhi-page .qr-panel p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 @media (max-width: 900px) {
   .heyhi-page .hero-title .hl,
   .heyhi-page .hero-title-2 .hl {
-    --size: clamp(46px, 12.8vw, 77px) !important;
+    --size: clamp(39px, 10.9vw, 65px) !important;
   }
 
   .heyhi-page .section-word .hl {
-    --size: clamp(42px, 9.6vw, 66px) !important;
+    --size: clamp(36px, 8.2vw, 56px) !important;
   }
 }
