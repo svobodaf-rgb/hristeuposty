@@ -5703,3 +5703,73 @@ select:focus-visible,
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Final sizing correction: keep the hand-drawn look, but calm the scale down. */
+.heyhi-page main,
+.heyhi-page .hero {
+  background: var(--bg);
+}
+
+.heyhi-page .hero-title-word .hl,
+.heyhi-page .section-word .hl {
+  font-size: calc(var(--size, 80px) * 0.8);
+}
+
+.heyhi-page .compact-header h2,
+.heyhi-page .tax-inner h2,
+.heyhi-page .confirmation-card h2,
+.heyhi-page .faq-block h2 {
+  font-size: clamp(2.25rem, 4.8vw, 4.15rem);
+}
+
+.heyhi-page .build-title,
+.heyhi-page .pay-card-title,
+.heyhi-page .trust-card h3 {
+  font-size: clamp(1.6rem, 2.8vw, 1.95rem);
+}
+
+.heyhi-page .hero-intro,
+.heyhi-page .account-meta,
+.heyhi-page .custom-amount-row,
+.heyhi-page .progress-foot,
+.heyhi-page .progress-note,
+.heyhi-page .footer-meta {
+  font-size: 0.95rem;
+}
+
+.heyhi-page .hero-subtitle {
+  font-size: clamp(1.5rem, 2.3vw, 1.9rem);
+}
+
+.heyhi-page .proc-text p {
+  font-size: clamp(1.3rem, 2.05vw, 1.7rem);
+}
+
+.heyhi-page .proc-text p + p {
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+}
+
+.heyhi-page .build-desc,
+.heyhi-page .pay-card-desc,
+.heyhi-page .trust-card p,
+.heyhi-page .tax-inner p,
+.heyhi-page .confirmation-card p,
+.heyhi-page .faq-list p,
+.heyhi-page .payment-note {
+  font-size: 1.06rem;
+}
+
+.heyhi-page .qr-panel p {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .heyhi-page .hero-title .hl,
+  .heyhi-page .hero-title-2 .hl {
+    --size: clamp(46px, 12.8vw, 77px) !important;
+  }
+
+  .heyhi-page .section-word .hl {
+    --size: clamp(42px, 9.6vw, 66px) !important;
+  }
+}
