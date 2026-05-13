@@ -31,45 +31,98 @@
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body class="bubbles-page">
-    <div class="bubbles-background" aria-hidden="true">
-      <span class="bubble-blob bubble-blob--lime"></span>
-      <span class="bubble-blob bubble-blob--blue"></span>
-      <span class="bubble-blob bubble-blob--pink"></span>
-      <span class="confetti-dot dot-1"></span>
-      <span class="confetti-dot dot-2"></span>
-      <span class="confetti-dot dot-3"></span>
-      <span class="confetti-dot dot-4"></span>
-      <span class="confetti-dot dot-5"></span>
-      <span class="confetti-dot dot-6"></span>
-      <span class="confetti-dot dot-7"></span>
-      <span class="confetti-dot dot-8"></span>
-      <span class="confetti-dot dot-9"></span>
-      <span class="confetti-dot dot-10"></span>
-      <span class="confetti-dot dot-11"></span>
-      <span class="confetti-dot dot-12"></span>
-      <span class="confetti-dot dot-13"></span>
-      <span class="confetti-dot dot-14"></span>
-      <span class="confetti-dot dot-15"></span>
-      <span class="confetti-dot dot-16"></span>
-      <span class="confetti-dot dot-17"></span>
-      <span class="confetti-dot dot-18"></span>
-      <span class="confetti-dot dot-19"></span>
-      <span class="confetti-dot dot-20"></span>
-      <span class="confetti-dot dot-21"></span>
-      <span class="confetti-dot dot-22"></span>
-      <span class="confetti-dot dot-23"></span>
-      <span class="confetti-dot dot-24"></span>
-      <span class="confetti-dot dot-25"></span>
-      <span class="confetti-dot dot-26"></span>
-      <span class="confetti-dot dot-27"></span>
-      <span class="confetti-dot dot-28"></span>
+  <body class="heyhi-page">
+    <svg class="heart-symbols" width="0" height="0" aria-hidden="true">
+      <defs>
+        <symbol id="heart-symbol" viewBox="0 0 32 28">
+          <path
+            d="M16,26 C16,26 2,16 2,9 C2,4.5 5.5,1 10,1 C13,1 15.5,2.5 16,5 C16.5,2.5 19,1 22,1 C26.5,1 30,4.5 30,9 C30,16 16,26 16,26 Z"
+            fill="currentColor"
+            stroke="var(--ink)"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="heyhi-confetti" aria-hidden="true">
+      <span class="confetti confetti-strip" style="--x:41.99%;--y:29.65%;--rot:73deg;--c:#E84D2C;--w:24px;--h:4px;--delay:-4.53s"></span>
+      <span class="confetti confetti-strip" style="--x:29.65%;--y:90.33%;--rot:21deg;--c:#2DB868;--w:12px;--h:7px;--delay:-3.44s"></span>
+      <span class="confetti confetti-strip" style="--x:90.33%;--y:61.78%;--rot:73deg;--c:#8B4FE8;--w:27px;--h:4px;--delay:-0.60s"></span>
+      <span class="confetti confetti-strip" style="--x:61.78%;--y:90.65%;--rot:34deg;--c:#FF4D8E;--w:11px;--h:5px;--delay:-4.22s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:90.65%;--y:68.81%;--rot:-68deg;--c:#FFCC2D;--delay:-0.29s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:68.81%;--y:12.09%;--rot:62deg;--c:#FF4D8E;--delay:-1.43s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:12.09%;--y:84.46%;--rot:-79deg;--c:#1FA89C;--delay:-3.71s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-strip" style="--x:84.46%;--y:5.89%;--rot:-38deg;--c:#8B4FE8;--w:13px;--h:4px;--delay:-3.16s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:5.89%;--y:28.63%;--rot:43deg;--c:#8B4FE8;--delay:-0.67s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:28.63%;--y:74.11%;--rot:24deg;--c:#2D5BD9;--s:10px;--delay:-0.32s"></span>
+      <span class="confetti confetti-dot" style="--x:74.11%;--y:63.21%;--rot:-66deg;--c:#FF4D8E;--s:7px;--delay:-1.04s"></span>
+      <span class="confetti confetti-dot" style="--x:63.21%;--y:13.31%;--rot:-79deg;--c:#2D5BD9;--s:6px;--delay:-2.45s"></span>
+      <span class="confetti confetti-dot" style="--x:13.31%;--y:6.32%;--rot:-53deg;--c:#FF6B2C;--s:7px;--delay:-2.20s"></span>
+      <span class="confetti confetti-dot" style="--x:6.32%;--y:20.78%;--rot:-2deg;--c:#FF6B2C;--s:11px;--delay:-0.79s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:20.78%;--y:49.03%;--rot:-11deg;--c:#2D5BD9;--delay:-0.13s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-strip" style="--x:49.03%;--y:44.07%;--rot:-61deg;--c:#FF4D8E;--w:22px;--h:7px;--delay:-0.68s"></span>
+      <span class="confetti confetti-strip" style="--x:44.07%;--y:15.86%;--rot:-85deg;--c:#2D5BD9;--w:26px;--h:5px;--delay:-3.11s"></span>
+      <span class="confetti confetti-strip" style="--x:15.86%;--y:2.64%;--rot:-65deg;--c:#E84D2C;--w:14px;--h:5px;--delay:-3.95s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:2.64%;--y:13.63%;--rot:22deg;--c:#FFCC2D;--delay:-0.97s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:13.63%;--y:62.16%;--rot:52deg;--c:#2D5BD9;--delay:-0.88s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-strip" style="--x:62.16%;--y:78.92%;--rot:-55deg;--c:#2D5BD9;--w:30px;--h:4px;--delay:-0.49s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:78.92%;--y:19.32%;--rot:-58deg;--c:#FF4D8E;--delay:-4.96s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:19.32%;--y:17.51%;--rot:-72deg;--c:#2DB868;--delay:-0.36s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:17.51%;--y:9.76%;--rot:89deg;--c:#FF4D8E;--s:13px;--delay:-4.01s"></span>
+      <span class="confetti confetti-dot" style="--x:9.76%;--y:99.27%;--rot:-77deg;--c:#FFCC2D;--s:10px;--delay:-1.93s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:99.27%;--y:7.22%;--rot:54deg;--c:#FF6B2C;--delay:-3.76s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:7.22%;--y:80.22%;--rot:-20deg;--c:#FFCC2D;--s:9px;--delay:-4.19s"></span>
+      <span class="confetti confetti-dot" style="--x:80.22%;--y:38.67%;--rot:46deg;--c:#FFCC2D;--s:12px;--delay:-2.49s"></span>
+      <span class="confetti confetti-dot" style="--x:38.67%;--y:75.28%;--rot:61deg;--c:#FF6B2C;--s:13px;--delay:-0.77s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:75.28%;--y:83.82%;--rot:0deg;--c:#2D5BD9;--delay:-1.94s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:83.82%;--y:49.78%;--rot:-62deg;--c:#FF6B2C;--delay:-3.46s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:49.78%;--y:15.41%;--rot:-20deg;--c:#8B4FE8;--s:9px;--delay:-4.66s"></span>
+      <span class="confetti confetti-strip" style="--x:15.41%;--y:38.82%;--rot:35deg;--c:#2DB868;--w:23px;--h:5px;--delay:-0.69s"></span>
+      <span class="confetti confetti-dot" style="--x:38.82%;--y:69.29%;--rot:78deg;--c:#2D5BD9;--s:11px;--delay:-3.36s"></span>
+      <span class="confetti confetti-strip" style="--x:69.29%;--y:93.16%;--rot:-65deg;--c:#8B4FE8;--w:17px;--h:7px;--delay:-1.80s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:93.16%;--y:13.79%;--rot:31deg;--c:#1FA89C;--delay:-1.84s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:13.79%;--y:67.25%;--rot:-25deg;--c:#1FA89C;--s:8px;--delay:-3.34s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:67.25%;--y:36.02%;--rot:-24deg;--c:#8B4FE8;--delay:-0.41s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:36.02%;--y:36.86%;--rot:30deg;--c:#FF4D8E;--s:8px;--delay:-0.27s"></span>
+      <span class="confetti confetti-dot" style="--x:36.86%;--y:66.82%;--rot:-75deg;--c:#FF4D8E;--s:9px;--delay:-1.19s"></span>
+      <span class="confetti confetti-dot" style="--x:66.82%;--y:8.11%;--rot:-80deg;--c:#2D5BD9;--s:9px;--delay:-2.06s"></span>
+      <span class="confetti confetti-dot" style="--x:8.11%;--y:5.44%;--rot:-47deg;--c:#FF6B2C;--s:11px;--delay:-1.51s"></span>
+      <span class="confetti confetti-dot" style="--x:5.44%;--y:23.71%;--rot:-16deg;--c:#1FA89C;--s:8px;--delay:-1.84s"></span>
+      <span class="confetti confetti-dot" style="--x:23.71%;--y:41.16%;--rot:-36deg;--c:#1FA89C;--s:10px;--delay:-1.99s"></span>
+      <span class="confetti confetti-strip" style="--x:41.16%;--y:30.13%;--rot:-24deg;--c:#FF6B2C;--w:16px;--h:6px;--delay:-3.05s"></span>
+      <span class="confetti confetti-strip" style="--x:30.13%;--y:36.86%;--rot:-18deg;--c:#E84D2C;--w:20px;--h:6px;--delay:-1.54s"></span>
+      <span class="confetti confetti-dot" style="--x:36.86%;--y:39.85%;--rot:20deg;--c:#1FA89C;--s:13px;--delay:-2.58s"></span>
+      <span class="confetti confetti-strip" style="--x:39.85%;--y:61.03%;--rot:-34deg;--c:#E84D2C;--w:22px;--h:7px;--delay:-3.01s"></span>
+      <span class="confetti confetti-strip" style="--x:61.03%;--y:30.85%;--rot:3deg;--c:#E84D2C;--w:27px;--h:7px;--delay:-2.96s"></span>
+      <span class="confetti confetti-strip" style="--x:30.85%;--y:51.63%;--rot:18deg;--c:#E84D2C;--w:24px;--h:4px;--delay:-4.31s"></span>
+      <span class="confetti confetti-strip" style="--x:51.63%;--y:60.24%;--rot:16deg;--c:#FFCC2D;--w:12px;--h:6px;--delay:-3.57s"></span>
+      <span class="confetti confetti-strip" style="--x:60.24%;--y:59.14%;--rot:65deg;--c:#8B4FE8;--w:22px;--h:6px;--delay:-0.57s"></span>
+      <span class="confetti confetti-strip" style="--x:59.14%;--y:86.12%;--rot:38deg;--c:#FF4D8E;--w:21px;--h:8px;--delay:-3.09s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:86.12%;--y:71.37%;--rot:-69deg;--c:#E84D2C;--delay:-2.65s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:71.37%;--y:11.40%;--rot:21deg;--c:#E84D2C;--delay:-4.99s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:11.40%;--y:61.86%;--rot:5deg;--c:#2DB868;--s:14px;--delay:-1.81s"></span>
+      <span class="confetti confetti-strip" style="--x:61.86%;--y:52.98%;--rot:90deg;--c:#1FA89C;--w:28px;--h:8px;--delay:-0.26s"></span>
+      <span class="confetti confetti-dot" style="--x:52.98%;--y:99.85%;--rot:-25deg;--c:#FF4D8E;--s:12px;--delay:-4.47s"></span>
+      <span class="confetti confetti-strip" style="--x:99.85%;--y:36.13%;--rot:-81deg;--c:#2DB868;--w:27px;--h:7px;--delay:-4.79s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:36.13%;--y:5.23%;--rot:71deg;--c:#2DB868;--delay:-4.25s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:5.23%;--y:89.44%;--rot:82deg;--c:#FFCC2D;--s:12px;--delay:-3.97s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:89.44%;--y:95.71%;--rot:63deg;--c:#FFCC2D;--delay:-1.71s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:95.71%;--y:85.08%;--rot:53deg;--c:#1FA89C;--s:6px;--delay:-4.20s"></span>
+      <span class="confetti confetti-dot" style="--x:85.08%;--y:79.32%;--rot:-29deg;--c:#FFCC2D;--s:8px;--delay:-3.86s"></span>
+      <span class="confetti confetti-strip" style="--x:79.32%;--y:34.12%;--rot:61deg;--c:#FFCC2D;--w:11px;--h:5px;--delay:-4.08s"></span>
+      <span class="confetti confetti-strip" style="--x:34.12%;--y:84.00%;--rot:49deg;--c:#FFCC2D;--w:16px;--h:6px;--delay:-0.18s"></span>
+      <span class="confetti confetti-strip" style="--x:84.00%;--y:77.19%;--rot:57deg;--c:#FF4D8E;--w:20px;--h:7px;--delay:-1.55s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:77.19%;--y:81.66%;--rot:-84deg;--c:#1FA89C;--delay:-2.57s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
+      <span class="confetti confetti-dot" style="--x:81.66%;--y:3.58%;--rot:-34deg;--c:#E84D2C;--s:10px;--delay:-4.09s"></span>
+      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:3.58%;--y:31.08%;--rot:2deg;--c:#FFCC2D;--delay:-4.59s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
     </div>
 
     <div class="page-shell bubbles-shell">
       <header class="bubbles-nav" aria-label="Hlavní navigace">
         <a class="bubbles-brand" href="#hero" aria-label="Hřiště U Pošty">
-          <span class="bubbles-logo-mark" aria-hidden="true">⭐</span>
+          <span class="bubbles-logo-mark" aria-hidden="true"><svg class="mark-heart" viewBox="0 0 32 28"><use href="#heart-symbol" /></svg></span>
           <span>
             <strong>Hřiště U Pošty</strong>
             <small>Palmovka • Praha 8</small>
@@ -87,16 +140,20 @@
         <section class="bubbles-hero" id="hero">
           <div class="bubbles-hero__copy">
             <div class="hero-badges" aria-label="Základní informace">
-              <span>🎉 Sbíráme</span>
-              <span>💰 Cíl 2 000 000 Kč</span>
+              <span>Sbíráme společně</span>
+              <span>Cíl 2 000 000 Kč</span>
+              <span>Od 15. 5. 2026</span>
             </div>
 
-            <p class="bubbles-kicker">Rekonstrukce hřiště V Mezihoří / U Pošty</p>
-            <h1>
-              <span>HŘIŠTĚ</span>
-              <span class="hero-h1-accent">U POŠTY</span>
+            <h1 class="hero-headline">
+              <span class="hero-headline__kicker">Sbíráme společně na renovaci</span>
+              <span class="sr-only">Hřiště U Pošty</span>
+              <span class="heyhi-word hero-word hero-word--top" aria-hidden="true"><span class="hl hl-pink shadow-blue" style="--rot:-4deg;--ty:-4px" data-letter="H">H</span><span class="hl hl-blue shadow-yellow" style="--rot:2deg;--ty:4px" data-letter="Ř">Ř</span><span class="hl hl-teal shadow-orange" style="--rot:-2deg;--ty:-1px" data-letter="I">I</span><span class="hl hl-orange shadow-purple" style="--rot:3deg;--ty:5px" data-letter="Š">Š</span><span class="hl hl-red shadow-green" style="--rot:-1deg;--ty:-3px" data-letter="T">T</span><span class="hl hl-purple shadow-pink" style="--rot:2deg;--ty:3px" data-letter="Ě">Ě</span></span>
+              <span class="hero-squiggle" aria-hidden="true">
+                <svg viewBox="0 0 420 42" focusable="false"><path d="M8 22 C48 6 82 37 122 20 S198 8 238 24 S318 36 412 16" /></svg>
+              </span>
+              <span class="heyhi-word hero-word hero-word--bottom" aria-hidden="true"><span class="hl hl-pink shadow-blue" style="--rot:-4deg;--ty:-4px" data-letter="U">U</span><span class="hl-space"></span><span class="hl hl-blue shadow-yellow" style="--rot:2deg;--ty:4px" data-letter="P">P</span><span class="hl hl-teal shadow-orange" style="--rot:-2deg;--ty:-1px" data-letter="O">O</span><span class="hl hl-orange shadow-purple" style="--rot:3deg;--ty:5px" data-letter="Š">Š</span><span class="hl hl-red shadow-green" style="--rot:-1deg;--ty:-3px" data-letter="T">T</span><span class="hl hl-purple shadow-pink" style="--rot:2deg;--ty:3px" data-letter="Y">Y</span></span>
             </h1>
-            <p class="hero-card-subtitle">Jediné hřiště Palmovky</p>
             <p class="bubbles-hero__lead">
               Obnovujeme hřiště pro děti na Palmovce. Každý dar pomůže
               bezpečnějším prvkům, novým dopadovým plochám a celkové
@@ -109,6 +166,7 @@
             </div>
 
             <article class="bubbles-progress-card is-zero-state" id="fundraising-progress" aria-label="Stav sbírky">
+              <span class="progress-sticker" aria-hidden="true">Pomozte!</span>
               <div class="progress-card__top">
                 <div>
                   <small>Aktuálně vybráno</small>
@@ -159,15 +217,13 @@
                 />
                 <figcaption>Návrh dispozice v5</figcaption>
               </figure>
-              <span class="photo-sticker photo-sticker--sun">⭐</span>
-              <span class="photo-sticker photo-sticker--heart">💚</span>
             </div>
           </div>
         </section>
 
         <div class="bubbles-wave" aria-hidden="true">
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0 64l48-10.7C96 43 192 21 288 26.7 384 32 480 64 576 74.7 672 85 768 75 864 58.7 960 43 1056 21 1152 26.7 1248 32 1344 64 1392 80l48 16v24H0z"></path>
+          <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+            <path d="M12 46 C92 14 168 76 248 44 S408 18 488 50 S648 74 728 42 S888 18 968 48 S1128 74 1208 42 S1360 18 1428 48" />
           </svg>
         </div>
 
@@ -207,24 +263,28 @@
           </div>
           <div class="build-grid">
             <article class="build-card build-card--green">
-              <span>🧗</span>
+              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 38h30M14 38V12h20v26M16 18h16M18 30l14-12M32 18l7 12M19 30h20" /></svg></span>
               <h3>Herní prvky</h3>
               <p>Nová sestava a prvky pro děti od nejmenších po školáky.</p>
+              <strong class="build-price">720 000 Kč</strong>
             </article>
             <article class="build-card build-card--yellow">
-              <span>🏖️</span>
+              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 30c8-6 24-6 32 0M10 36c7-4 21-4 28 0M12 24c7-8 17-8 24 0" /></svg></span>
               <h3>Dopadové plochy</h3>
               <p>Bezpečnější povrchy podle norem pro dětská hřiště.</p>
+              <strong class="build-price">280 000 Kč</strong>
             </article>
             <article class="build-card build-card--blue">
-              <span>🌱</span>
+              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 38V25M15 39h18M16 26c-5 0-8-4-8-8s3-8 8-8c2-5 13-5 16 0 5 0 8 4 8 8s-3 8-8 8H16z" /></svg></span>
               <h3>Zeleň a prostor</h3>
               <p>Přehlednější a příjemnější místo pro každodenní používání.</p>
+              <strong class="build-price">350 000 Kč</strong>
             </article>
             <article class="build-card build-card--pink">
-              <span>🪑</span>
+              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 20h28M8 28h32M13 28v10M35 28v10M14 14h20" /></svg></span>
               <h3>Mobiliář</h3>
               <p>Lavičky, oplocení a drobnosti, bez kterých hřiště nefunguje dobře.</p>
+              <strong class="build-price">650 000 Kč</strong>
             </article>
           </div>
         </section>
@@ -236,7 +296,6 @@
           </div>
           <div class="bubbles-payment-grid">
             <article class="payment-bubble-card payment-bubble-card--transfer">
-              <span class="payment-card-emoji" aria-hidden="true">🏦</span>
               <h3>Transparentní účet</h3>
               <p class="microcopy card-intro">
                 Dar můžete poslat běžným převodem. Účet je zřízený pro veřejnou
@@ -274,7 +333,6 @@
             </article>
 
             <article class="payment-bubble-card payment-bubble-card--qr">
-              <span class="payment-card-emoji" aria-hidden="true">📱</span>
               <h3>QR platba</h3>
               <p class="microcopy card-intro">
                 Rychlá volba částky přegeneruje QR kód pro bankovní aplikaci.
@@ -365,7 +423,7 @@
         </section>
 
         <section class="tax-card bubbles-tax-card" id="danovy-odpocet">
-          <div class="tax-icon" aria-hidden="true">✓</div>
+          <div class="tax-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 25l9 9 20-22" /></svg></div>
           <div class="tax-text">
             <h3>Dar si můžete uplatnit v daních</h3>
             <p>
@@ -457,9 +515,9 @@
         </section>
       </main>
 
-      <footer class="footer-card bubbles-footer">
+      <footer class="footer-card bubbles-footer" id="kontakt">
         <div class="bubbles-footer__top">
-          <span class="bubbles-logo-mark" aria-hidden="true">✦</span>
+          <span class="bubbles-logo-mark" aria-hidden="true"><svg class="mark-heart" viewBox="0 0 32 28"><use href="#heart-symbol" /></svg></span>
           <div>
             <h3>Spolek pro správu a zvelebení dětského hřiště U Pošty</h3>
             <p>U Pošty 1474/1, Libeň, 180 00 Praha 8 • IČO: 22045082</p>

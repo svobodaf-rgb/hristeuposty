@@ -353,7 +353,7 @@ function buildQrSvg(text) {
     viewBoxSize +
     "\" width=\"200\" height=\"200\" role=\"img\" aria-label=\"QR kód pro bankovní platbu\">" +
     "<rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"/>" +
-    "<path fill=\"#1f3d18\" d=\"" +
+    "<path fill=\"#1F1A17\" d=\"" +
     path.join("") +
     "\"/></svg>"
   );

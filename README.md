@@ -35,3 +35,9 @@ www.hristeuposty.cz
 ## Poznámka
 
 Veřejný web nepoužívá backend, databázi ani serverové ukládání formulářů. Platební QR kód se generuje lokálně v prohlížeči.
+
+
+## Public visual layer
+
+- Veřejný web používá HeyHi Creative vizuální vrstvu se self-hostovaným fontem Caveat v `assets/fonts/caveat-variable.woff2`.
+- Font je distribuován pod SIL Open Font License (OFL); public deploy nepoužívá runtime Google Fonts ani fontové CDN.
