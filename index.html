@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="light" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
     />
     <meta
       http-equiv="Permissions-Policy"
@@ -27,554 +27,363 @@
     <meta property="og:locale" content="cs_CZ" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23fff8dd'/%3E%3Ccircle cx='20' cy='42' r='8' fill='%231db96a'/%3E%3Cpath d='M15 35h31l-9 13H24z' fill='%23ff5e3a'/%3E%3Cpath d='M35 17v31' stroke='%230a1f12' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M27 23c8-10 19-8 23-2-6 6-16 8-23 2z' fill='%23ffe135'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23faf4e6'/%3E%3Cpath d='M32 52s-18-11-24-24C4 18 10 9 20 9c5 0 9 3 12 8 3-5 7-8 12-8 10 0 16 9 12 19-6 13-24 24-24 24z' fill='%23e84d2c'/%3E%3C/svg%3E"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body class="heyhi-page">
-    <svg class="heart-symbols" width="0" height="0" aria-hidden="true">
-      <defs>
-        <symbol id="heart-symbol" viewBox="0 0 32 28">
-          <path
-            d="M16,26 C16,26 2,16 2,9 C2,4.5 5.5,1 10,1 C13,1 15.5,2.5 16,5 C16.5,2.5 19,1 22,1 C26.5,1 30,4.5 30,9 C30,16 16,26 16,26 Z"
-            fill="currentColor"
-            stroke="var(--ink)"
-            stroke-width="1.6"
-            stroke-linejoin="round"
-          />
-        </symbol>
-      </defs>
-    </svg>
+    <nav class="site" id="top" aria-label="Hlavní navigace">
+      <a class="logo" href="#top" aria-label="Hřiště U Pošty">
+        <svg class="heart-icon" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" style="transform: rotate(-15deg)">
+          <path d="M12 21s-7-4.5-9.5-9C0.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8C19 16.5 12 21 12 21z" fill="var(--red)" />
+        </svg>
+        Hřiště u pošty
+      </a>
+      <div class="nav-links">
+        <a href="#pribeh">O projektu</a>
+        <a href="#co-stavime">Co stavíme</a>
+        <a href="#platba">Přispět</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <a class="cta" href="#platba">Přispět</a>
+    </nav>
 
-    <div class="heyhi-confetti" aria-hidden="true">
-      <span class="confetti confetti-strip" style="--x:41.99%;--y:29.65%;--rot:73deg;--c:#E84D2C;--w:24px;--h:4px;--delay:-4.53s"></span>
-      <span class="confetti confetti-strip" style="--x:29.65%;--y:90.33%;--rot:21deg;--c:#2DB868;--w:12px;--h:7px;--delay:-3.44s"></span>
-      <span class="confetti confetti-strip" style="--x:90.33%;--y:61.78%;--rot:73deg;--c:#8B4FE8;--w:27px;--h:4px;--delay:-0.60s"></span>
-      <span class="confetti confetti-strip" style="--x:61.78%;--y:90.65%;--rot:34deg;--c:#FF4D8E;--w:11px;--h:5px;--delay:-4.22s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:90.65%;--y:68.81%;--rot:-68deg;--c:#FFCC2D;--delay:-0.29s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:68.81%;--y:12.09%;--rot:62deg;--c:#FF4D8E;--delay:-1.43s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:12.09%;--y:84.46%;--rot:-79deg;--c:#1FA89C;--delay:-3.71s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-strip" style="--x:84.46%;--y:5.89%;--rot:-38deg;--c:#8B4FE8;--w:13px;--h:4px;--delay:-3.16s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:5.89%;--y:28.63%;--rot:43deg;--c:#8B4FE8;--delay:-0.67s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:28.63%;--y:74.11%;--rot:24deg;--c:#2D5BD9;--s:10px;--delay:-0.32s"></span>
-      <span class="confetti confetti-dot" style="--x:74.11%;--y:63.21%;--rot:-66deg;--c:#FF4D8E;--s:7px;--delay:-1.04s"></span>
-      <span class="confetti confetti-dot" style="--x:63.21%;--y:13.31%;--rot:-79deg;--c:#2D5BD9;--s:6px;--delay:-2.45s"></span>
-      <span class="confetti confetti-dot" style="--x:13.31%;--y:6.32%;--rot:-53deg;--c:#FF6B2C;--s:7px;--delay:-2.20s"></span>
-      <span class="confetti confetti-dot" style="--x:6.32%;--y:20.78%;--rot:-2deg;--c:#FF6B2C;--s:11px;--delay:-0.79s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:20.78%;--y:49.03%;--rot:-11deg;--c:#2D5BD9;--delay:-0.13s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-strip" style="--x:49.03%;--y:44.07%;--rot:-61deg;--c:#FF4D8E;--w:22px;--h:7px;--delay:-0.68s"></span>
-      <span class="confetti confetti-strip" style="--x:44.07%;--y:15.86%;--rot:-85deg;--c:#2D5BD9;--w:26px;--h:5px;--delay:-3.11s"></span>
-      <span class="confetti confetti-strip" style="--x:15.86%;--y:2.64%;--rot:-65deg;--c:#E84D2C;--w:14px;--h:5px;--delay:-3.95s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:2.64%;--y:13.63%;--rot:22deg;--c:#FFCC2D;--delay:-0.97s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:13.63%;--y:62.16%;--rot:52deg;--c:#2D5BD9;--delay:-0.88s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-strip" style="--x:62.16%;--y:78.92%;--rot:-55deg;--c:#2D5BD9;--w:30px;--h:4px;--delay:-0.49s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:78.92%;--y:19.32%;--rot:-58deg;--c:#FF4D8E;--delay:-4.96s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:19.32%;--y:17.51%;--rot:-72deg;--c:#2DB868;--delay:-0.36s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:17.51%;--y:9.76%;--rot:89deg;--c:#FF4D8E;--s:13px;--delay:-4.01s"></span>
-      <span class="confetti confetti-dot" style="--x:9.76%;--y:99.27%;--rot:-77deg;--c:#FFCC2D;--s:10px;--delay:-1.93s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:99.27%;--y:7.22%;--rot:54deg;--c:#FF6B2C;--delay:-3.76s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:7.22%;--y:80.22%;--rot:-20deg;--c:#FFCC2D;--s:9px;--delay:-4.19s"></span>
-      <span class="confetti confetti-dot" style="--x:80.22%;--y:38.67%;--rot:46deg;--c:#FFCC2D;--s:12px;--delay:-2.49s"></span>
-      <span class="confetti confetti-dot" style="--x:38.67%;--y:75.28%;--rot:61deg;--c:#FF6B2C;--s:13px;--delay:-0.77s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:75.28%;--y:83.82%;--rot:0deg;--c:#2D5BD9;--delay:-1.94s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:83.82%;--y:49.78%;--rot:-62deg;--c:#FF6B2C;--delay:-3.46s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:49.78%;--y:15.41%;--rot:-20deg;--c:#8B4FE8;--s:9px;--delay:-4.66s"></span>
-      <span class="confetti confetti-strip" style="--x:15.41%;--y:38.82%;--rot:35deg;--c:#2DB868;--w:23px;--h:5px;--delay:-0.69s"></span>
-      <span class="confetti confetti-dot" style="--x:38.82%;--y:69.29%;--rot:78deg;--c:#2D5BD9;--s:11px;--delay:-3.36s"></span>
-      <span class="confetti confetti-strip" style="--x:69.29%;--y:93.16%;--rot:-65deg;--c:#8B4FE8;--w:17px;--h:7px;--delay:-1.80s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:93.16%;--y:13.79%;--rot:31deg;--c:#1FA89C;--delay:-1.84s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:13.79%;--y:67.25%;--rot:-25deg;--c:#1FA89C;--s:8px;--delay:-3.34s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:67.25%;--y:36.02%;--rot:-24deg;--c:#8B4FE8;--delay:-0.41s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:36.02%;--y:36.86%;--rot:30deg;--c:#FF4D8E;--s:8px;--delay:-0.27s"></span>
-      <span class="confetti confetti-dot" style="--x:36.86%;--y:66.82%;--rot:-75deg;--c:#FF4D8E;--s:9px;--delay:-1.19s"></span>
-      <span class="confetti confetti-dot" style="--x:66.82%;--y:8.11%;--rot:-80deg;--c:#2D5BD9;--s:9px;--delay:-2.06s"></span>
-      <span class="confetti confetti-dot" style="--x:8.11%;--y:5.44%;--rot:-47deg;--c:#FF6B2C;--s:11px;--delay:-1.51s"></span>
-      <span class="confetti confetti-dot" style="--x:5.44%;--y:23.71%;--rot:-16deg;--c:#1FA89C;--s:8px;--delay:-1.84s"></span>
-      <span class="confetti confetti-dot" style="--x:23.71%;--y:41.16%;--rot:-36deg;--c:#1FA89C;--s:10px;--delay:-1.99s"></span>
-      <span class="confetti confetti-strip" style="--x:41.16%;--y:30.13%;--rot:-24deg;--c:#FF6B2C;--w:16px;--h:6px;--delay:-3.05s"></span>
-      <span class="confetti confetti-strip" style="--x:30.13%;--y:36.86%;--rot:-18deg;--c:#E84D2C;--w:20px;--h:6px;--delay:-1.54s"></span>
-      <span class="confetti confetti-dot" style="--x:36.86%;--y:39.85%;--rot:20deg;--c:#1FA89C;--s:13px;--delay:-2.58s"></span>
-      <span class="confetti confetti-strip" style="--x:39.85%;--y:61.03%;--rot:-34deg;--c:#E84D2C;--w:22px;--h:7px;--delay:-3.01s"></span>
-      <span class="confetti confetti-strip" style="--x:61.03%;--y:30.85%;--rot:3deg;--c:#E84D2C;--w:27px;--h:7px;--delay:-2.96s"></span>
-      <span class="confetti confetti-strip" style="--x:30.85%;--y:51.63%;--rot:18deg;--c:#E84D2C;--w:24px;--h:4px;--delay:-4.31s"></span>
-      <span class="confetti confetti-strip" style="--x:51.63%;--y:60.24%;--rot:16deg;--c:#FFCC2D;--w:12px;--h:6px;--delay:-3.57s"></span>
-      <span class="confetti confetti-strip" style="--x:60.24%;--y:59.14%;--rot:65deg;--c:#8B4FE8;--w:22px;--h:6px;--delay:-0.57s"></span>
-      <span class="confetti confetti-strip" style="--x:59.14%;--y:86.12%;--rot:38deg;--c:#FF4D8E;--w:21px;--h:8px;--delay:-3.09s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:86.12%;--y:71.37%;--rot:-69deg;--c:#E84D2C;--delay:-2.65s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:71.37%;--y:11.40%;--rot:21deg;--c:#E84D2C;--delay:-4.99s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:11.40%;--y:61.86%;--rot:5deg;--c:#2DB868;--s:14px;--delay:-1.81s"></span>
-      <span class="confetti confetti-strip" style="--x:61.86%;--y:52.98%;--rot:90deg;--c:#1FA89C;--w:28px;--h:8px;--delay:-0.26s"></span>
-      <span class="confetti confetti-dot" style="--x:52.98%;--y:99.85%;--rot:-25deg;--c:#FF4D8E;--s:12px;--delay:-4.47s"></span>
-      <span class="confetti confetti-strip" style="--x:99.85%;--y:36.13%;--rot:-81deg;--c:#2DB868;--w:27px;--h:7px;--delay:-4.79s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:36.13%;--y:5.23%;--rot:71deg;--c:#2DB868;--delay:-4.25s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:5.23%;--y:89.44%;--rot:82deg;--c:#FFCC2D;--s:12px;--delay:-3.97s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:89.44%;--y:95.71%;--rot:63deg;--c:#FFCC2D;--delay:-1.71s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:95.71%;--y:85.08%;--rot:53deg;--c:#1FA89C;--s:6px;--delay:-4.20s"></span>
-      <span class="confetti confetti-dot" style="--x:85.08%;--y:79.32%;--rot:-29deg;--c:#FFCC2D;--s:8px;--delay:-3.86s"></span>
-      <span class="confetti confetti-strip" style="--x:79.32%;--y:34.12%;--rot:61deg;--c:#FFCC2D;--w:11px;--h:5px;--delay:-4.08s"></span>
-      <span class="confetti confetti-strip" style="--x:34.12%;--y:84.00%;--rot:49deg;--c:#FFCC2D;--w:16px;--h:6px;--delay:-0.18s"></span>
-      <span class="confetti confetti-strip" style="--x:84.00%;--y:77.19%;--rot:57deg;--c:#FF4D8E;--w:20px;--h:7px;--delay:-1.55s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:77.19%;--y:81.66%;--rot:-84deg;--c:#1FA89C;--delay:-2.57s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-      <span class="confetti confetti-dot" style="--x:81.66%;--y:3.58%;--rot:-34deg;--c:#E84D2C;--s:10px;--delay:-4.09s"></span>
-      <svg class="confetti confetti-squiggle" viewBox="0 0 34 16" style="--x:3.58%;--y:31.08%;--rot:2deg;--c:#FFCC2D;--delay:-4.59s" aria-hidden="true"><path d="M2 9 Q7 1 12 8 T22 8 T32 7"/></svg>
-    </div>
+    <main>
+      <section class="hero" id="hero">
+        <div class="confetti-bg" data-confetti data-count="70" data-seed="3" aria-hidden="true"></div>
 
-    <div class="page-shell bubbles-shell">
-      <header class="bubbles-nav" aria-label="Hlavní navigace">
-        <a class="bubbles-brand" href="#hero" aria-label="Hřiště U Pošty">
-          <span class="bubbles-logo-mark" aria-hidden="true"><svg class="mark-heart" viewBox="0 0 32 28"><use href="#heart-symbol" /></svg></span>
-          <span>
-            <strong>Hřiště U Pošty</strong>
-            <small>Palmovka • Praha 8</small>
+        <div class="hero-intro relz">
+          <span class="strip" style="--c: var(--yellow); --r: 20deg; width: 18px;"></span>
+          <span>Sbíráme společně na renovaci · 2026</span>
+          <span class="strip" style="--c: var(--teal); --r: -15deg; width: 18px;"></span>
+        </div>
+
+        <h1 class="sr-only">Hřiště U Pošty</h1>
+        <div class="hero-title" aria-hidden="true">
+          <span class="hand-word hero-title-word">
+            <span class="hl" style="--c1:var(--teal);--c2:var(--pink);--size:200px;--rot:-2deg;--ty:4px"><span class="hl-shadow">H</span><span class="hl-front">H</span></span>
+            <span class="hl" style="--c1:var(--orange);--c2:var(--blue);--size:185px;--rot:1.5deg;--ty:-2px"><span class="hl-shadow">Ř</span><span class="hl-front">Ř</span></span>
+            <span class="hl solid" style="--c1:var(--purple);--size:195px;--rot:-1deg;--ty:2px"><span class="hl-front">I</span></span>
+            <span class="hl" style="--c1:var(--red);--c2:var(--teal);--size:190px;--rot:2deg;--ty:-4px"><span class="hl-shadow">Š</span><span class="hl-front">Š</span></span>
+            <span class="hl" style="--c1:var(--blue);--c2:var(--orange);--size:200px;--rot:-2.5deg;--ty:0"><span class="hl-shadow">T</span><span class="hl-front">T</span></span>
+            <span class="hl solid" style="--c1:var(--pink);--size:185px;--rot:3deg;--ty:6px"><span class="hl-front">Ě</span></span>
           </span>
-        </a>
-        <nav class="bubbles-nav-links" aria-label="Sekce stránky">
-          <a href="#pribeh">O projektu</a>
-          <a href="#co-stavime">Co stavíme</a>
-          <a href="#platba">Přispět</a>
-        </nav>
-        <a class="btn bubbles-nav-cta" href="#platba">Přispět</a>
-      </header>
+        </div>
 
-      <main>
-        <section class="bubbles-hero" id="hero">
-          <div class="bubbles-hero__copy">
-            <div class="hero-badges" aria-label="Základní informace">
-              <span>Sbíráme společně</span>
-              <span>Cíl 2 000 000 Kč</span>
-              <span>Od 15. 5. 2026</span>
-            </div>
+        <div class="hero-squiggle" aria-hidden="true">
+          <svg class="squiggle" data-color="green" data-width="420" data-height="36" data-amplitude="10" data-freq="5" data-stroke="6"></svg>
+        </div>
 
-            <h1 class="hero-headline">
-              <span class="hero-headline__kicker">Sbíráme společně na renovaci</span>
-              <span class="sr-only">Hřiště U Pošty</span>
-              <span class="heyhi-word hero-word hero-word--top" aria-hidden="true"><span class="hl hl-pink shadow-blue" style="--rot:-4deg;--ty:-4px" data-letter="H">H</span><span class="hl hl-blue shadow-yellow" style="--rot:2deg;--ty:4px" data-letter="Ř">Ř</span><span class="hl hl-teal shadow-orange" style="--rot:-2deg;--ty:-1px" data-letter="I">I</span><span class="hl hl-orange shadow-purple" style="--rot:3deg;--ty:5px" data-letter="Š">Š</span><span class="hl hl-red shadow-green" style="--rot:-1deg;--ty:-3px" data-letter="T">T</span><span class="hl hl-purple shadow-pink" style="--rot:2deg;--ty:3px" data-letter="Ě">Ě</span></span>
-              <span class="hero-squiggle" aria-hidden="true">
-                <svg viewBox="0 0 420 42" focusable="false"><path d="M8 22 C48 6 82 37 122 20 S198 8 238 24 S318 36 412 16" /></svg>
-              </span>
-              <span class="heyhi-word hero-word hero-word--bottom" aria-hidden="true"><span class="hl hl-pink shadow-blue" style="--rot:-4deg;--ty:-4px" data-letter="U">U</span><span class="hl-space"></span><span class="hl hl-blue shadow-yellow" style="--rot:2deg;--ty:4px" data-letter="P">P</span><span class="hl hl-teal shadow-orange" style="--rot:-2deg;--ty:-1px" data-letter="O">O</span><span class="hl hl-orange shadow-purple" style="--rot:3deg;--ty:5px" data-letter="Š">Š</span><span class="hl hl-red shadow-green" style="--rot:-1deg;--ty:-3px" data-letter="T">T</span><span class="hl hl-purple shadow-pink" style="--rot:2deg;--ty:3px" data-letter="Y">Y</span></span>
-            </h1>
-            <p class="bubbles-hero__lead">
-              Obnovujeme hřiště pro děti na Palmovce. Každý dar pomůže
-              bezpečnějším prvkům, novým dopadovým plochám a celkové
-              revitalizaci.
+        <div class="hero-title-2" aria-hidden="true">
+          <span class="hand-word hero-title-word">
+            <span class="hl" style="--c1:var(--yellow);--c2:var(--red);--size:175px;--rot:1deg;--ty:0"><span class="hl-shadow">U</span><span class="hl-front">U</span></span>
+            <span class="space"></span>
+            <span class="hl solid" style="--c1:var(--teal);--size:180px;--rot:-3deg;--ty:-2px"><span class="hl-front">P</span></span>
+            <span class="hl" style="--c1:var(--pink);--c2:var(--blue);--size:185px;--rot:2deg;--ty:4px"><span class="hl-shadow">O</span><span class="hl-front">O</span></span>
+            <span class="hl solid" style="--c1:var(--orange);--size:170px;--rot:-1.5deg;--ty:0"><span class="hl-front">Š</span></span>
+            <span class="hl" style="--c1:var(--purple);--c2:var(--yellow);--size:180px;--rot:1deg;--ty:-3px"><span class="hl-shadow">T</span><span class="hl-front">T</span></span>
+            <span class="hl solid" style="--c1:var(--blue);--size:190px;--rot:-2.5deg;--ty:2px"><span class="hl-front">Y</span></span>
+          </span>
+        </div>
+
+        <div class="hero-row">
+          <div>
+            <p class="hero-subtitle">
+              Obnovujeme hřiště, které slouží dětem na Palmovce už víc než 20 let.
+              <span class="accent">Každý dar pomůže bezpečnější a příjemnější obnově.</span>
             </p>
-
             <div class="hero-actions">
-              <a class="btn bubbles-primary-cta" href="#platba">Chci přispět</a>
-              <a class="btn btn-secondary bubbles-secondary-cta" href="#pribeh">Co stavíme</a>
+              <a class="cta" href="#platba">Chci přispět</a>
+              <a class="cta cta-secondary" href="#co-stavime">Co stavíme</a>
             </div>
+            <div class="hero-subtitle-foot" aria-hidden="true">
+              <svg class="underline-rough" data-color="orange" data-width="280" data-stroke="5" data-jitter="2"></svg>
+            </div>
+          </div>
 
-            <article class="bubbles-progress-card is-zero-state" id="fundraising-progress" aria-label="Stav sbírky">
-              <span class="progress-sticker" aria-hidden="true">Pomozte!</span>
-              <div class="progress-card__top">
-                <div>
-                  <small>Aktuálně vybráno</small>
-                  <strong id="vybrano-amount">
-                    Sbírka startuje 15. 5. 2026. Aktuální stav budeme
-                    zveřejňovat v týdenním rytmu.
-                  </strong>
+          <article class="progress-wrap" id="fundraising-progress" aria-label="Stav sbírky">
+            <div class="hand-frame">
+              <div class="progress-box">
+                <div class="progress-row">
+                  <span id="vybrano-amount">— Kč</span>
+                  <span id="progress-percent">0 %</span>
                 </div>
-                <div class="amount-goal" id="cil-amount">Cíl: 2 000 000 Kč</div>
-              </div>
-              <div class="progress-track bubbles-progress-track" aria-hidden="true" hidden>
-                <div class="progress-bar" id="progress-bar"></div>
-              </div>
-              <div class="bubbles-progress-meta">
-                <div id="progress-percent-group" hidden>
-                  <strong id="progress-percent" hidden>Po prvních příspěvcích</strong>
+                <div class="progress-track" aria-hidden="true">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-foot">
+                  <span id="donor-count">0 dárců</span>
+                  <span id="cil-amount">Cíl: 2 000 000 Kč</span>
+                </div>
+                <div class="progress-meta-hidden" id="progress-percent-group">
                   <span id="progress-percent-label"></span>
                 </div>
-                <div id="donor-count-group" hidden>
-                  <strong id="donor-count" hidden>Stav aktualizujeme ručně</strong>
+                <div class="progress-meta-hidden" id="donor-count-group">
                   <span id="donor-count-label"></span>
                 </div>
-                <div>
-                  <span id="remaining-label">Cíl sbírky: </span>
-                  <strong id="remaining-amount">2 000 000 Kč</strong>
-                </div>
+                <p class="progress-note">
+                  <span id="remaining-label">Cíl sbírky: </span><strong id="remaining-amount">2 000 000 Kč</strong>
+                </p>
               </div>
-              <p class="progress-note">
-                Pohyb na účtu je vidět ve veřejném náhledu transparentního účtu.
-              </p>
-            </article>
-          </div>
-
-          <div class="bubbles-hero__visual" aria-label="Vizualizace hřiště">
-            <div class="photo-stack">
-              <figure class="photo-card photo-card--main">
-                <img
-                  src="assets/images/current-playground-reference.jpg"
-                  alt="Referenční obrázek obnoveného hřiště U Pošty se zelení a herními prvky"
-                />
-                <figcaption>Referenční obrázek — ne finální návrh</figcaption>
-              </figure>
-              <figure class="photo-card photo-card--plan">
-                <img
-                  id="hero-plan-image"
-                  src="assets/images/hero-visualization.png"
-                  alt="Půdorys návrhu hřiště U Pošty"
-                />
-                <figcaption>Návrh dispozice v5</figcaption>
-              </figure>
             </div>
-          </div>
-        </section>
+            <div class="sticker-help">POMOZTE!</div>
+          </article>
+        </div>
+      </section>
 
-        <div class="bubbles-wave" aria-hidden="true">
-          <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
-            <path d="M12 46 C92 14 168 76 248 44 S408 18 488 50 S648 74 728 42 S888 18 968 48 S1128 74 1208 42 S1360 18 1428 48" />
-          </svg>
+      <div class="squiggle-divider" aria-hidden="true">
+        <svg class="squiggle" data-color="blue" data-width="1280" data-height="40" data-amplitude="10" data-freq="14" data-stroke="4"></svg>
+      </div>
+
+      <section class="block" id="pribeh">
+        <div class="section-header">
+          <span class="hand-word section-word" aria-label="Proč?">
+            <span class="hl" style="--c1:var(--teal);--c2:var(--orange);--size:120px;--rot:-3deg"><span class="hl-shadow">P</span><span class="hl-front">P</span></span>
+            <span class="hl solid" style="--c1:var(--pink);--size:115px;--rot:2deg;--ty:3px"><span class="hl-front">R</span></span>
+            <span class="hl" style="--c1:var(--blue);--c2:var(--yellow);--size:118px;--rot:-1deg"><span class="hl-shadow">O</span><span class="hl-front">O</span></span>
+            <span class="hl solid" style="--c1:var(--purple);--size:130px;--rot:4deg;--ty:-4px"><span class="hl-front">Č</span></span>
+            <span class="hl" style="--c1:var(--red);--c2:var(--teal);--size:115px;--rot:-2deg;--ty:2px"><span class="hl-shadow">?</span><span class="hl-front">?</span></span>
+          </span>
+          <span class="section-confetti" aria-hidden="true">
+            <span class="strip" style="--c:var(--yellow);--r:20deg;width:22px"></span>
+            <span class="dot" style="--c:var(--pink);width:10px;height:10px"></span>
+            <span class="strip" style="--c:var(--blue);--r:-15deg;width:18px"></span>
+          </span>
         </div>
 
-        <section class="section bubbles-section story-bubbles" id="pribeh">
-          <div class="section-heading">
-            <p class="eyebrow">Proč sbíráme</p>
-            <h2>Hřiště tu je. Jen už potřebuje pořádnou obnovu.</h2>
+        <div class="proc-row">
+          <div class="proc-text">
+            <p>Hřiště u pošty slouží dětem z okolí <span class="highlight-yell">od roku 2003.</span></p>
+            <p>Původní vybavení dosluhuje. Chceme obnovit herní prvky, dopadové plochy i místo pro rodiče tak, aby hřiště zase dobře fungovalo každý den.</p>
+            <p>Sbírku pořádá místní spolek sousedů. Účel je konkrétní: rekonstrukce hřiště na křižovatce ulic V Mezihoří a U Pošty a jeho celková revitalizace.</p>
           </div>
-          <div class="story-grid">
-            <div class="story-copy">
-              <p>
-                Hřiště na křižovatce ulic V Mezihoří a U Pošty slouží dětem a
-                rodičům z okolí každý den. Je to jediný otevřený dětský prostor v
-                docházkové vzdálenosti pro rodiny z Palmovky a okolí Libně.
-              </p>
-              <p>
-                Sbírka pomůže zaplatit rekonstrukci tohoto konkrétního místa:
-                nové herní prvky pro děti do 12 let, bezpečné dopadové plochy,
-                mobiliář a celkovou úpravu prostoru. Nejde o obecný fond ani
-                jiný projekt.
-              </p>
-            </div>
-            <aside class="story-note bubbles-note">
-              <strong>Konkrétní účel sbírky</strong>
-              <p>
-                Rekonstrukce hřiště na křižovatce ulic V Mezihoří a U Pošty v
-                Praze a jeho celková revitalizace.
-              </p>
-            </aside>
-          </div>
-        </section>
 
-        <section class="section bubbles-section build-section" id="co-stavime">
-          <div class="section-heading">
-            <p class="eyebrow">Co stavíme</p>
-            <h2>Praktická obnova, ne velké gesto</h2>
+          <div class="photo-collage" id="galerie" aria-label="Fotky a návrh hřiště">
+            <figure class="photo photo-current">
+              <img src="assets/images/current-playground-reference.jpg" alt="Referenční obrázek obnoveného hřiště se zelení a herními prvky" />
+            </figure>
+            <figure class="photo photo-plan">
+              <img id="hero-plan-image" src="assets/images/hero-visualization.png" alt="Půdorys návrhu hřiště U Pošty" />
+            </figure>
+            <span class="strip" style="position:absolute; top:30px; right:30px; --c:var(--pink); --r:25deg; width:24px; height:7px;"></span>
+            <span class="dot" style="position:absolute; top:60px; right:0; --c:var(--yellow); width:10px; height:10px;"></span>
+            <span class="strip" style="position:absolute; bottom:80px; right:280px; --c:var(--teal); --r:-15deg; width:20px; height:6px;"></span>
+            <span class="dot" style="position:absolute; bottom:120px; right:240px; --c:var(--blue); width:8px; height:8px;"></span>
           </div>
-          <div class="build-grid">
-            <article class="build-card build-card--green">
-              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 38h30M14 38V12h20v26M16 18h16M18 30l14-12M32 18l7 12M19 30h20" /></svg></span>
-              <h3>Herní prvky</h3>
-              <p>Nová sestava a prvky pro děti od nejmenších po školáky.</p>
-              <strong class="build-price">720 000 Kč</strong>
-            </article>
-            <article class="build-card build-card--yellow">
-              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 30c8-6 24-6 32 0M10 36c7-4 21-4 28 0M12 24c7-8 17-8 24 0" /></svg></span>
-              <h3>Dopadové plochy</h3>
-              <p>Bezpečnější povrchy podle norem pro dětská hřiště.</p>
-              <strong class="build-price">280 000 Kč</strong>
-            </article>
-            <article class="build-card build-card--blue">
-              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 38V25M15 39h18M16 26c-5 0-8-4-8-8s3-8 8-8c2-5 13-5 16 0 5 0 8 4 8 8s-3 8-8 8H16z" /></svg></span>
-              <h3>Zeleň a prostor</h3>
-              <p>Přehlednější a příjemnější místo pro každodenní používání.</p>
-              <strong class="build-price">350 000 Kč</strong>
-            </article>
-            <article class="build-card build-card--pink">
-              <span class="build-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 20h28M8 28h32M13 28v10M35 28v10M14 14h20" /></svg></span>
-              <h3>Mobiliář</h3>
-              <p>Lavičky, oplocení a drobnosti, bez kterých hřiště nefunguje dobře.</p>
-              <strong class="build-price">650 000 Kč</strong>
-            </article>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="section bubbles-section payment-section" id="platba">
-          <div class="section-heading section-heading--center">
-            <p class="eyebrow">Přispět</p>
-            <h2>Vyberte částku a pošlete dar převodem nebo QR platbou</h2>
-          </div>
-          <div class="bubbles-payment-grid">
-            <article class="payment-bubble-card payment-bubble-card--transfer">
-              <h3>Transparentní účet</h3>
-              <p class="microcopy card-intro">
-                Dar můžete poslat běžným převodem. Účet je zřízený pro veřejnou
-                sbírku a je vedený jako transparentní.
-              </p>
-              <dl class="detail-list">
-                <div class="detail-item">
-                  <dt>Číslo účtu</dt>
-                  <dd id="account-number">369889612/0300</dd>
-                </div>
-                <div class="detail-item">
-                  <dt>Banka</dt>
-                  <dd id="bank-name">Československá obchodní banka, a. s.</dd>
-                </div>
-                <div class="detail-item full">
-                  <dt>IBAN</dt>
-                  <dd id="account-iban">CZ32 0300 0000 0003 6988 9612</dd>
-                </div>
-              </dl>
-              <p class="microcopy payment-privacy-note">
+      <section class="block" id="co-stavime">
+        <div class="section-header">
+          <span class="hand-word section-word" aria-label="Co stavíme?">
+            <span class="hl solid" style="--c1:var(--orange);--size:120px;--rot:-2deg"><span class="hl-front">C</span></span>
+            <span class="hl" style="--c1:var(--blue);--c2:var(--pink);--size:115px;--rot:3deg"><span class="hl-shadow">O</span><span class="hl-front">O</span></span>
+            <span class="space"></span>
+            <span class="hl" style="--c1:var(--purple);--c2:var(--yellow);--size:115px;--rot:-2deg"><span class="hl-shadow">S</span><span class="hl-front">S</span></span>
+            <span class="hl solid" style="--c1:var(--teal);--size:120px;--rot:1deg"><span class="hl-front">T</span></span>
+            <span class="hl" style="--c1:var(--red);--c2:var(--blue);--size:115px;--rot:-1deg"><span class="hl-shadow">A</span><span class="hl-front">A</span></span>
+            <span class="hl solid" style="--c1:var(--pink);--size:118px;--rot:2deg"><span class="hl-front">V</span></span>
+            <span class="hl" style="--c1:var(--orange);--c2:var(--teal);--size:115px;--rot:-3deg"><span class="hl-shadow">Í</span><span class="hl-front">Í</span></span>
+            <span class="hl solid" style="--c1:var(--blue);--size:120px;--rot:1deg"><span class="hl-front">M</span></span>
+            <span class="hl" style="--c1:var(--green);--c2:var(--pink);--size:115px;--rot:-2deg"><span class="hl-shadow">E</span><span class="hl-front">E</span></span>
+            <span class="hl solid" style="--c1:var(--purple);--size:115px;--rot:3deg"><span class="hl-front">?</span></span>
+          </span>
+        </div>
+
+        <div class="build-grid">
+          <article class="build-card" style="transform: rotate(-.4deg)">
+            <div class="hand-frame"><div class="build-card-inner">
+              <div class="build-num"><span class="hl" style="--c1:var(--teal);--c2:var(--pink);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--pink);--c2:var(--teal);--size:64px"><span class="hl-shadow">1</span><span class="hl-front">1</span></span></div>
+              <div class="build-body"><h2 class="build-title">Herní sestava</h2><p class="build-desc">Prolézačky, lezecká stěna, skluzavka a houpačky.</p><svg class="underline-rough" data-color="teal" data-width="120" data-stroke="3.5"></svg></div>
+              <strong class="build-price" style="color: var(--teal)">720 000 Kč</strong>
+            </div></div>
+          </article>
+          <article class="build-card" style="transform: rotate(.6deg)">
+            <div class="hand-frame"><div class="build-card-inner">
+              <div class="build-num"><span class="hl" style="--c1:var(--orange);--c2:var(--blue);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--blue);--c2:var(--orange);--size:64px"><span class="hl-shadow">2</span><span class="hl-front">2</span></span></div>
+              <div class="build-body"><h2 class="build-title">Dopadové plochy</h2><p class="build-desc">Bezpečné povrchy podle norem pro dětská hřiště.</p><svg class="underline-rough" data-color="orange" data-width="120" data-stroke="3.5"></svg></div>
+              <strong class="build-price" style="color: var(--orange)">280 000 Kč</strong>
+            </div></div>
+          </article>
+          <article class="build-card" style="transform: rotate(-.5deg)">
+            <div class="hand-frame"><div class="build-card-inner">
+              <div class="build-num"><span class="hl" style="--c1:var(--purple);--c2:var(--yellow);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--yellow);--c2:var(--purple);--size:64px"><span class="hl-shadow">3</span><span class="hl-front">3</span></span></div>
+              <div class="build-body"><h2 class="build-title">Zeleň a prostor</h2><p class="build-desc">Přehlednější a příjemnější místo pro každodenní používání.</p><svg class="underline-rough" data-color="purple" data-width="120" data-stroke="3.5"></svg></div>
+              <strong class="build-price" style="color: var(--purple)">350 000 Kč</strong>
+            </div></div>
+          </article>
+          <article class="build-card" style="transform: rotate(.4deg)">
+            <div class="hand-frame"><div class="build-card-inner">
+              <div class="build-num"><span class="hl" style="--c1:var(--pink);--c2:var(--teal);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--teal);--c2:var(--pink);--size:64px"><span class="hl-shadow">4</span><span class="hl-front">4</span></span></div>
+              <div class="build-body"><h2 class="build-title">Mobiliář a oplocení</h2><p class="build-desc">Lavičky, oplocení a drobnosti, bez kterých hřiště nefunguje.</p><svg class="underline-rough" data-color="pink" data-width="120" data-stroke="3.5"></svg></div>
+              <strong class="build-price" style="color: var(--pink)">650 000 Kč</strong>
+            </div></div>
+          </article>
+        </div>
+      </section>
+
+      <div class="squiggle-divider" aria-hidden="true">
+        <svg class="squiggle" data-color="pink" data-width="1280" data-height="50" data-amplitude="14" data-freq="11" data-stroke="5"></svg>
+      </div>
+
+      <section class="block pay-block" id="platba">
+        <div class="confetti-bg" data-confetti data-count="40" data-seed="9" aria-hidden="true"></div>
+        <div class="section-header relz">
+          <span class="hand-word section-word" aria-label="Jak přispět?">
+            <span class="hl" style="--c1:var(--red);--c2:var(--teal);--size:120px;--rot:-3deg"><span class="hl-shadow">J</span><span class="hl-front">J</span></span>
+            <span class="hl solid" style="--c1:var(--blue);--size:118px;--rot:2deg"><span class="hl-front">A</span></span>
+            <span class="hl" style="--c1:var(--yellow);--c2:var(--purple);--size:122px;--rot:-1deg"><span class="hl-shadow">K</span><span class="hl-front">K</span></span>
+            <span class="space"></span>
+            <span class="hl solid" style="--c1:var(--pink);--size:120px;--rot:-2deg"><span class="hl-front">P</span></span>
+            <span class="hl" style="--c1:var(--teal);--c2:var(--orange);--size:115px;--rot:1deg"><span class="hl-shadow">Ř</span><span class="hl-front">Ř</span></span>
+            <span class="hl solid" style="--c1:var(--purple);--size:120px;--rot:-3deg"><span class="hl-front">I</span></span>
+            <span class="hl" style="--c1:var(--orange);--c2:var(--blue);--size:118px;--rot:2deg"><span class="hl-shadow">S</span><span class="hl-front">S</span></span>
+            <span class="hl solid" style="--c1:var(--blue);--size:115px;--rot:-1deg"><span class="hl-front">P</span></span>
+            <span class="hl" style="--c1:var(--red);--c2:var(--yellow);--size:118px;--rot:3deg"><span class="hl-shadow">Ě</span><span class="hl-front">Ě</span></span>
+            <span class="hl solid" style="--c1:var(--green);--size:120px;--rot:-2deg"><span class="hl-front">T</span></span>
+            <span class="hl" style="--c1:var(--pink);--c2:var(--teal);--size:115px;--rot:1deg"><span class="hl-shadow">?</span><span class="hl-front">?</span></span>
+          </span>
+        </div>
+
+        <div class="pay-grid">
+          <article class="pay-card" style="transform: rotate(-.5deg)">
+            <div class="hand-frame"><div class="pay-card-inner">
+              <div class="pay-card-head"><span class="strip" style="--c:var(--blue);--r:-10deg;width:22px;height:7px"></span><h2 class="pay-card-title">Bankovní převod</h2></div>
+              <p class="pay-card-desc">Pošlete libovolnou částku na transparentní účet veřejné sbírky.</p>
+              <div class="account-box">
+                <div class="account-label">ČÍSLO ÚČTU</div>
+                <div id="account-number" class="account-number">369889612/0300</div>
+                <div class="account-meta">Banka: <strong id="bank-name">Československá obchodní banka, a. s.</strong></div>
+                <div class="account-meta">IBAN: <span id="account-iban">CZ32 0300 0000 0003 6988 9612</span></div>
+                <div class="account-meta" style="margin-top:10px;">Zpráva: Hřiště u pošty</div>
+              </div>
+              <p class="payment-note">
                 U transparentního účtu mohou být údaje o platbě veřejně viditelné.
-                <a class="inline-link" id="transparent-account-privacy-link" href="transparent-account.html">
-                  Jak to funguje
-                </a>
+                <a class="inline-link" id="transparent-account-privacy-link" href="transparent-account.html">Jak to funguje</a>
               </p>
-              <a
-                class="btn btn-secondary"
-                id="transparent-account-bank-link"
-                href="https://www.csob.cz/firmy/bezne-ucty/transparentni-ucty/ucet?account=369889612"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Zobrazit účet u ČSOB
-              </a>
-            </article>
+              <a class="inline-link bank-link" href="https://www.csob.cz/firmy/bezne-ucty/transparentni-ucty/ucet?account=369889612" target="_blank" rel="noopener noreferrer">Zobrazit účet u ČSOB</a>
+            </div></div>
+          </article>
 
-            <article class="payment-bubble-card payment-bubble-card--qr">
-              <h3>QR platba</h3>
-              <p class="microcopy card-intro">
-                Rychlá volba částky přegeneruje QR kód pro bankovní aplikaci.
-              </p>
-              <div class="donation-picker">
-                <div class="donation-buttons" role="group" aria-label="Rychlá volba částky daru">
-                  <button class="amount-button" data-amount="200" type="button">200 Kč</button>
-                  <button class="amount-button is-active" data-amount="500" type="button">500 Kč</button>
-                  <button class="amount-button" data-amount="1000" type="button">1 000 Kč</button>
-                  <button class="amount-button" data-amount="2000" type="button">2 000 Kč</button>
+          <article class="pay-card yellow" style="transform: rotate(.6deg)">
+            <div class="hand-frame"><div class="pay-card-inner">
+              <div class="qr-copy">
+                <div class="pay-card-head"><span class="strip" style="--c:var(--purple);--r:10deg;width:22px;height:7px"></span><h2 class="pay-card-title">QR platba</h2></div>
+                <p class="pay-card-desc">Vyberte částku a naskenujte kód bankovní aplikací.</p>
+                <div class="amount-buttons donation-buttons" role="group" aria-label="Rychlá volba částky daru">
+                  <button class="amount-button" data-amount="200" type="button">200&nbsp;Kč</button>
+                  <button class="amount-button is-active" data-amount="500" type="button">500&nbsp;Kč</button>
+                  <button class="amount-button" data-amount="1000" type="button">1 000&nbsp;Kč</button>
+                  <button class="amount-button" data-amount="2000" type="button">2 000&nbsp;Kč</button>
                 </div>
-                <div class="custom-amount">
-                  <label for="custom-amount-input">Vlastní částka v Kč</label>
-                  <input
-                    id="custom-amount-input"
-                    type="number"
-                    min="50"
-                    step="50"
-                    placeholder="Např. 1500"
-                    inputmode="numeric"
-                  />
+                <div class="custom-amount-row custom-amount">
+                  <label for="custom-amount-input">…nebo&nbsp;</label>
+                  <input id="custom-amount-input" type="number" min="50" step="50" inputmode="numeric" placeholder="vlastní v Kč" />
                 </div>
               </div>
-              <div class="qr-panel">
+              <div class="qr-wrap qr-panel">
                 <div id="qr-code" aria-label="QR kód pro bankovní platbu"></div>
                 <strong>Naskenujte a přispějte</strong>
-                <p class="microcopy" id="qr-summary">QR kód pro dar ve výši 500 Kč.</p>
-                <p class="microcopy" id="account-notice">
-                  QR platba je připravena pro transparentní účet veřejné sbírky.
-                </p>
-                <p class="microcopy">
-                  Do zprávy pro příjemce nepište zbytečné osobní údaje.
-                  <a class="inline-link" id="gdpr-policy-link-payment" href="privacy.html">
-                    Ochrana osobních údajů
-                  </a>
-                </p>
+                <p id="qr-summary">QR kód pro dar ve výši 500 Kč.</p>
+                <p id="account-notice">QR platba je připravena pro transparentní účet veřejné sbírky.</p>
+                <p>Do zprávy pro příjemce nepište zbytečné osobní údaje. <a class="inline-link" id="gdpr-policy-link-payment" href="privacy.html">Ochrana osobních údajů</a></p>
               </div>
-            </article>
-          </div>
-        </section>
+            </div></div>
+          </article>
+        </div>
+      </section>
 
-        <section class="section bubbles-section transparency-summary" id="transparentnost">
-          <div class="section-heading">
-            <p class="eyebrow">Transparentnost</p>
-            <h2>Kdo sbírku pořádá a kde najdete dokumenty</h2>
-          </div>
-          <div class="transparency-grid">
-            <div class="transparency-copy">
-              <dl class="fact-list">
-                <div>
-                  <dt>Pořadatel</dt>
-                  <dd>Spolek pro správu a zvelebení dětského hřiště U Pošty, IČO: 22045082</dd>
-                </div>
-                <div>
-                  <dt>Účel</dt>
-                  <dd>Rekonstrukce hřiště V Mezihoří / U Pošty a jeho celková revitalizace.</dd>
-                </div>
-                <div>
-                  <dt>Účet</dt>
-                  <dd>369889612/0300, IBAN CZ32 0300 0000 0003 6988 9612, ČSOB</dd>
-                </div>
-                <div>
-                  <dt>Režijní náklady</dt>
-                  <dd>Maximálně 2,5 % čistého výtěžku veřejné sbírky.</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="document-panel bubbles-document-panel">
-              <h3>Dokumenty a informace</h3>
-              <p class="microcopy">
-                Osvědčení sbírky, informace k transparentnímu účtu a zásady ochrany
-                osobních údajů držíme na jedné stránce.
-              </p>
-              <div
-                data-documents-list="compact"
-                data-document-ids="collection-certificate,transparent-account-info,privacy"
-              ></div>
-              <noscript>
-                <ul class="document-list">
-                  <li><a href="osvedceni-verejna-sbirka.html">Osvědčení o veřejné sbírce</a><span>Bude doplněno</span></li>
-                  <li><a href="transparent-account.html">Informace k transparentnímu účtu</a><span>Dostupné</span></li>
-                  <li><a href="privacy.html">Zásady ochrany osobních údajů</a><span>Dostupné</span></li>
-                </ul>
-              </noscript>
-              <a class="inline-link" href="transparency.html">Transparentnost a dokumenty</a>
-            </div>
-          </div>
-        </section>
+      <section class="block trust-block" id="transparentnost">
+        <div class="section-header compact-header">
+          <h2>Transparentně a jednoduše</h2>
+          <svg class="underline-rough" data-color="green" data-width="240" data-stroke="4" data-jitter="2"></svg>
+        </div>
+        <div class="trust-grid">
+          <div class="hand-frame"><div class="trust-card">
+            <h3>Kdo sbírku pořádá</h3>
+            <p>Spolek pro správu a zvelebení dětského hřiště U Pošty, IČO: 22045082.</p>
+          </div></div>
+          <div class="hand-frame"><div class="trust-card">
+            <h3>Na co sbíráme</h3>
+            <p>Na rekonstrukci hřiště V Mezihoří / U Pošty a jeho celkovou revitalizaci.</p>
+          </div></div>
+          <div class="hand-frame"><div class="trust-card">
+            <h3>Dokumenty</h3>
+            <p>Osvědčení, transparentní účet a pravidla ochrany osobních údajů najdete na jednom místě.</p>
+            <div data-documents-list="compact" data-document-ids="collection-certificate,transparent-account-info,privacy"></div>
+            <a class="inline-link" href="transparency.html">Transparentnost a dokumenty</a>
+          </div></div>
+        </div>
+      </section>
 
-        <section class="tax-card bubbles-tax-card" id="danovy-odpocet">
-          <div class="tax-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 25l9 9 20-22" /></svg></div>
-          <div class="tax-text">
-            <h3>Dar si můžete uplatnit v daních</h3>
-            <p>
-              U fyzických osob se uplatňují dary nad 2 % základu daně nebo alespoň
-              1 000 Kč za rok, u právnických osob dar od 2 000 Kč. Rozhodující je
-              vždy aktuální znění zákona o daních z příjmů.
-            </p>
-            <p>
-              Maximální odpočet činí 30 % základu daně u fyzických osob
-              (roky 2022–2026) i právnických osob (do února 2027). Tento limit
-              vychází z § 15 a § 20 zákona č. 586/1992 Sb., o daních z příjmů,
-              ve znění zákona č. 24/2025 Sb.
-            </p>
-            <p>
-              Potvrzení vystavíme na žádost po ověření přijetí daru.
-              <a class="inline-link" href="potvrzeni-o-daru.html">Chci potvrzení o daru</a>
-            </p>
-          </div>
-        </section>
+      <section class="block tax-block" id="danovy-odpocet">
+        <div class="hand-frame"><div class="tax-inner">
+          <h2>Dar si můžete uplatnit v daních</h2>
+          <p>U fyzických osob se uplatňují dary nad 2 % základu daně nebo alespoň 1 000 Kč za rok, u právnických osob dar od 2 000 Kč. Rozhodující je vždy aktuální znění zákona o daních z příjmů.</p>
+          <p>Potvrzení vystavíme na žádost po ověření přijetí daru. <a class="inline-link" href="potvrzeni-o-daru.html">Chci potvrzení o daru</a></p>
+        </div></div>
+      </section>
 
-        <section class="confirmation-teaser bubbles-confirmation-teaser" aria-labelledby="confirmation-teaser-title">
+      <section class="block confirmation-block" aria-labelledby="confirmation-teaser-title">
+        <div class="confirmation-card">
           <div>
-            <p class="eyebrow">Potvrzení</p>
-            <h3 id="confirmation-teaser-title">Potřebujete potvrzení o daru?</h3>
+            <h2 id="confirmation-teaser-title">Potřebujete potvrzení?</h2>
+            <p>Vyplňte krátký formulář na samostatné stránce. Potvrzení vystavujeme po ověření přijetí daru na transparentní účet.</p>
           </div>
-          <p>
-            Vyplňte krátký formulář na samostatné stránce. Potvrzení vystavujeme
-            po ověření přijetí daru na transparentní účet.
-          </p>
-          <a class="btn btn-secondary" href="potvrzeni-o-daru.html">Vyplnit žádost</a>
-        </section>
+          <a class="cta cta-secondary" href="potvrzeni-o-daru.html">Vyplnit žádost</a>
+        </div>
+      </section>
 
-        <section class="section bubbles-section faq-section" id="faq">
-          <div class="section-heading">
-            <p class="eyebrow">FAQ</p>
-            <h2>Časté otázky</h2>
-          </div>
-          <div class="faq-list">
-            <details>
-              <summary>Kdo sbírku pořádá?</summary>
-              <p>
-                Spolek pro správu a zvelebení dětského hřiště U Pošty, IČO:
-                22045082, se sídlem U Pošty 1474/1, Libeň, 180 00 Praha 8.
-              </p>
-            </details>
-            <details>
-              <summary>Na co přesně dary slouží?</summary>
-              <p>
-                Na rekonstrukci hřiště na křižovatce ulic V Mezihoří a U Pošty
-                v Praze a jeho celkovou revitalizaci.
-              </p>
-            </details>
-            <details>
-              <summary>Kde uvidím transparentní účet?</summary>
-              <p>
-                Účet je vedený jako transparentní u ČSOB. Odkaz najdete v platební
-                části a na stránce
-                <a class="inline-link" href="transparent-account.html">Informace k transparentnímu účtu</a>.
-              </p>
-            </details>
-            <details>
-              <summary>Jak požádám o potvrzení o daru?</summary>
-              <p>
-                Přes samostatný formulář
-                <a class="inline-link" href="potvrzeni-o-daru.html">Žádost o potvrzení o daru</a>.
-                Potvrzení vystavíme po ověření přijetí daru.
-              </p>
-            </details>
-            <details>
-              <summary>Co když se nevybere celá částka?</summary>
-              <p>
-                Sbírka je konána na dobu neurčitou. Souběžně hledáme grantové
-                zdroje a příspěvek městské části. Pokud by se projekt z
-                objektivních důvodů neuskutečnil, spolek naloží s prostředky
-                podle pravidel veřejné sbírky podle zákona č. 117/2001 Sb.
-              </p>
-            </details>
-            <details>
-              <summary>Je sbírka osvědčená krajským úřadem?</summary>
-              <p>
-                Ano. Sbírka je osvědčena a začíná 15. 5. 2026. Osvědčení bude
-                zveřejněno na stránce
-                <a class="inline-link" href="transparency.html">
-                  Transparentnost a dokumenty
-                </a>.
-              </p>
-            </details>
-          </div>
-        </section>
-      </main>
+      <section class="block faq-block" id="faq">
+        <div class="section-header compact-header">
+          <h2>Časté otázky</h2>
+          <svg class="underline-rough" data-color="pink" data-width="180" data-stroke="4" data-jitter="2"></svg>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Kdo sbírku pořádá?</summary>
+            <p>Spolek pro správu a zvelebení dětského hřiště U Pošty, IČO: 22045082, se sídlem U Pošty 1474/1, Libeň, 180 00 Praha 8.</p>
+          </details>
+          <details>
+            <summary>Na co přesně dary slouží?</summary>
+            <p>Na rekonstrukci hřiště na křižovatce ulic V Mezihoří a U Pošty v Praze a jeho celkovou revitalizaci.</p>
+          </details>
+          <details>
+            <summary>Kde uvidím transparentní účet?</summary>
+            <p>Účet je vedený jako transparentní u ČSOB. Odkaz najdete v platební části a na stránce <a class="inline-link" href="transparent-account.html">Informace k transparentnímu účtu</a>.</p>
+          </details>
+          <details>
+            <summary>Jak požádám o potvrzení o daru?</summary>
+            <p>Přes samostatný formulář <a class="inline-link" href="potvrzeni-o-daru.html">Žádost o potvrzení o daru</a>. Potvrzení vystavíme po ověření přijetí daru.</p>
+          </details>
+        </div>
+      </section>
+    </main>
 
-      <footer class="footer-card bubbles-footer" id="kontakt">
-        <div class="bubbles-footer__top">
-          <span class="bubbles-logo-mark" aria-hidden="true"><svg class="mark-heart" viewBox="0 0 32 28"><use href="#heart-symbol" /></svg></span>
-          <div>
-            <h3>Spolek pro správu a zvelebení dětského hřiště U Pošty</h3>
-            <p>U Pošty 1474/1, Libeň, 180 00 Praha 8 • IČO: 22045082</p>
-          </div>
-        </div>
-        <div class="footer-grid">
-          <div class="footer-item">
-            <strong>Kontakt</strong>
-            <p><a href="mailto:hristeuposty@gmail.com">hristeuposty@gmail.com</a></p>
-          </div>
-          <div class="footer-item">
-            <strong>Účet</strong>
-            <p>
-              <a
-                id="transparent-account-link"
-                href="https://www.csob.cz/firmy/bezne-ucty/transparentni-ucty/ucet?account=369889612"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Transparentní účet u ČSOB
-              </a>
-            </p>
-          </div>
-          <div class="footer-item">
-            <strong>Dokumenty</strong>
-            <p>
-              <a class="inline-link" href="transparency.html">Transparentnost</a>
-            </p>
-          </div>
-        </div>
-        <div class="footer-links">
-          <a class="inline-link" id="gdpr-policy-link-footer" href="privacy.html">
-            Zásady ochrany osobních údajů
-          </a>
-          <a class="inline-link" id="gdpr-transparent-account-link-footer" href="transparent-account.html">
-            Informace k transparentnímu účtu
-          </a>
-        </div>
-        <div class="footer-legal-strip">
-          Pořadatel: Spolek pro správu a zvelebení dětského hřiště U Pošty •
-          IČO 22045082 • MS Praha, oddíl L, vložka 79560 • Účel: rekonstrukce
-          hřiště U Pošty, Praha 8 • Účet 369889612/0300 (ČSOB, transparentní) •
-          Sbírka osvědčená od 15. 5. 2026, na dobu neurčitou, území ČR.
-        </div>
-        <p class="footer-legal">
-          Veřejný náhled účtu, osvědčení sbírky a další základní dokumenty
-          najdete na stránce
-          <a class="inline-link" href="transparency.html">
-            Transparentnost a dokumenty
-          </a>.
-        </p>
-      </footer>
-    </div>
+    <footer class="site" id="kontakt">
+      <div class="logo" style="font-size: 28px;">
+        <svg class="heart-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s-7-4.5-9.5-9C0.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8C19 16.5 12 21 12 21z" fill="var(--red)" />
+        </svg>
+        Hřiště u pošty
+      </div>
+      <div class="footer-meta">
+        <strong>Spolek pro správu a zvelebení dětského hřiště U Pošty</strong><br />
+        U Pošty 1474/1, Libeň, 180 00 Praha 8 · IČO: 22045082 · <a href="mailto:hristeuposty@gmail.com">hristeuposty@gmail.com</a><br />
+        <a id="transparent-account-link" href="https://www.csob.cz/firmy/bezne-ucty/transparentni-ucty/ucet?account=369889612" rel="noopener noreferrer" target="_blank">Transparentní účet u ČSOB</a> · <a href="transparency.html">Transparentnost</a> · <a id="gdpr-policy-link-footer" href="privacy.html">Osobní údaje</a> · <a id="gdpr-transparent-account-link-footer" href="transparent-account.html">Transparentní účet</a>
+      </div>
+      <div class="footer-conf" aria-hidden="true">
+        <span class="strip" style="--c:var(--pink);--r:15deg;width:18px;height:6px"></span>
+        <span class="dot" style="--c:var(--blue);width:8px;height:8px"></span>
+        <span class="strip" style="--c:var(--teal);--r:-20deg;width:18px;height:6px"></span>
+        <span class="dot" style="--c:var(--yellow);width:8px;height:8px"></span>
+      </div>
+    </footer>
 
     <script defer src="assets/js/confirmations-templates.js"></script>
     <script defer src="assets/js/confirmations-shared.js"></script>
     <script defer src="assets/js/documents.js"></script>
+    <script defer src="assets/js/heyhi-decor.js"></script>
     <script defer src="assets/js/app.js"></script>
   </body>
 </html>

@@ -4732,3 +4732,974 @@ select:focus-visible,
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Claude V1 hand-drawn homepage layer */
+.heyhi-page {
+  --bg: #FAF4E6;
+  --ink: #2A2622;
+  --pink: #FF4D8E;
+  --blue: #2D5BD9;
+  --teal: #1FA89C;
+  --orange: #FF6B2C;
+  --red: #E84D2C;
+  --purple: #8B4FE8;
+  --yellow: #FFCC2D;
+  --green: #2DB868;
+  --f-display: "Rubik Doodle Shadow", cursive;
+  --f-brush: "Caveat Brush", "Caveat", cursive;
+  --f-body: "Patrick Hand", "Caveat", cursive;
+  --f-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-width: 0;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+}
+
+.heyhi-page *,
+.heyhi-page *::before,
+.heyhi-page *::after {
+  box-sizing: border-box;
+}
+
+.heyhi-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.heyhi-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.heyhi-page .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.heyhi-page .hl {
+  position: relative;
+  display: inline-block;
+  font-family: var(--f-display);
+  font-size: var(--size, 80px);
+  font-weight: 400;
+  line-height: 1;
+  transform: translateY(var(--ty, 0px)) rotate(var(--rot, 0deg));
+  margin-right: 0.04em;
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+
+.heyhi-page .hl .hl-shadow {
+  position: absolute;
+  inset: 0;
+  color: var(--c2, var(--ink));
+}
+
+.heyhi-page .hl .hl-front {
+  position: relative;
+  color: var(--c1);
+}
+
+.heyhi-page .hl.solid .hl-shadow {
+  display: none;
+}
+
+.heyhi-page .hand-word {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.heyhi-page .hand-word .space {
+  display: inline-block;
+  width: .35em;
+}
+
+.heyhi-page .hand-frame {
+  position: relative;
+}
+
+.heyhi-page .hand-frame > .frame-svg {
+  position: absolute;
+  inset: -6px;
+  z-index: 2;
+  pointer-events: none;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+}
+
+.heyhi-page .squiggle-divider {
+  display: block;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 34px clamp(20px, 6vw, 80px);
+}
+
+.heyhi-page .confetti-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heyhi-page .generated-confetti {
+  position: absolute;
+  pointer-events: none;
+}
+
+.heyhi-page .generated-confetti-dot {
+  border-radius: 50%;
+}
+
+.heyhi-page .generated-confetti-strip {
+  border-radius: 2px;
+}
+
+.heyhi-page .strip {
+  display: inline-block;
+  height: 6px;
+  background: var(--c, var(--yellow));
+  border-radius: 3px;
+  transform: rotate(var(--r, 20deg));
+}
+
+.heyhi-page .dot {
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--c, var(--pink));
+}
+
+.heyhi-page nav.site {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 30px clamp(20px, 6vw, 80px);
+}
+
+.heyhi-page .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--f-brush);
+  font-size: 28px;
+  letter-spacing: .5px;
+}
+
+.heyhi-page .heart-icon {
+  flex: 0 0 auto;
+  filter: drop-shadow(2px 2px 0 rgba(42, 38, 34, .14));
+}
+
+.heyhi-page .nav-links {
+  display: flex;
+  gap: 36px;
+  font-size: 20px;
+}
+
+.heyhi-page .nav-links a {
+  transition: color .15s, transform .15s;
+}
+
+.heyhi-page .nav-links a:hover,
+.heyhi-page .nav-links a:focus-visible {
+  color: var(--pink);
+  transform: rotate(-1deg);
+}
+
+.heyhi-page .cta,
+.heyhi-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  padding: 10px 28px;
+  border: 3px solid var(--ink);
+  border-radius: 30px 32px 28px 33px / 30px 33px 28px 32px;
+  background: var(--pink);
+  color: #fff;
+  font-family: var(--f-brush);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  box-shadow: 4px 4px 0 var(--ink);
+  transform: rotate(-2deg);
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.heyhi-page .cta:hover,
+.heyhi-page .cta:focus-visible,
+.heyhi-page .btn:hover,
+.heyhi-page .btn:focus-visible {
+  box-shadow: 4px 6px 0 var(--ink);
+  transform: rotate(-2deg) translateY(-2px);
+}
+
+.heyhi-page .cta-secondary,
+.heyhi-page .btn-secondary {
+  background: #fff;
+  color: var(--ink);
+  transform: rotate(1deg);
+}
+
+.heyhi-page .hero {
+  position: relative;
+  min-height: min(920px, auto);
+  padding: 40px clamp(20px, 6vw, 80px) 80px;
+}
+
+.heyhi-page .hero-intro {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.heyhi-page .hero-title,
+.heyhi-page .hero-title-2,
+.heyhi-page .hero-squiggle {
+  position: relative;
+  z-index: 2;
+}
+
+.heyhi-page .hero-title {
+  margin-left: min(20px, 2vw);
+}
+
+.heyhi-page .hero-squiggle {
+  max-width: 420px;
+  margin: 12px 0 12px min(80px, 8vw);
+}
+
+.heyhi-page .hero-title-2 {
+  margin-left: min(60px, 6vw);
+  margin-bottom: 48px;
+}
+
+.heyhi-page .hero-row {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1240px;
+  margin-top: 32px;
+}
+
+.heyhi-page .hero-subtitle {
+  max-width: 560px;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: clamp(1.75rem, 2.7vw, 2.25rem);
+  line-height: 1.42;
+}
+
+.heyhi-page .hero-subtitle .accent {
+  color: var(--pink);
+}
+
+.heyhi-page .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.heyhi-page .hero-subtitle-foot {
+  margin-top: 18px;
+}
+
+.heyhi-page .progress-wrap {
+  position: relative;
+  width: min(460px, 100%);
+}
+
+.heyhi-page .progress-box {
+  min-height: 150px;
+  padding: 22px 28px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.heyhi-page .progress-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.heyhi-page #vybrano-amount {
+  font-family: var(--f-brush);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.05;
+}
+
+.heyhi-page #progress-percent {
+  color: var(--pink);
+  font-family: var(--f-brush);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  white-space: nowrap;
+}
+
+.heyhi-page .progress-track {
+  position: relative;
+  display: block;
+  height: 28px;
+  margin-bottom: 10px;
+  border: 2.5px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.heyhi-page .progress-track[hidden],
+.heyhi-page [hidden] {
+  display: none !important;
+}
+
+.heyhi-page .progress-bar {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+  transition: width 900ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.heyhi-page .progress-foot,
+.heyhi-page .progress-note {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0;
+  color: rgba(42, 38, 34, .62);
+  font-size: 18px;
+}
+
+.heyhi-page .progress-note {
+  display: block;
+  margin-top: 8px;
+}
+
+.heyhi-page .progress-meta-hidden {
+  display: none;
+}
+
+.heyhi-page .sticker-help {
+  position: absolute;
+  top: -24px;
+  right: -30px;
+  z-index: 3;
+  padding: 8px 18px;
+  border: 3px solid var(--ink);
+  border-radius: 20px 22px 18px 23px;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--f-brush);
+  font-size: 24px;
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(8deg);
+}
+
+.heyhi-page section.block {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px clamp(20px, 6vw, 80px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.heyhi-page .section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.heyhi-page .section-confetti {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.heyhi-page .compact-header {
+  display: grid;
+  gap: 8px;
+  align-items: start;
+}
+
+.heyhi-page .compact-header h2,
+.heyhi-page .tax-inner h2,
+.heyhi-page .confirmation-card h2,
+.heyhi-page .faq-block h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--f-brush);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 400;
+  line-height: .95;
+}
+
+.heyhi-page .proc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.heyhi-page .proc-text p {
+  margin: 0 0 24px;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  line-height: 1.55;
+}
+
+.heyhi-page .proc-text p + p {
+  color: #555;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  line-height: 1.65;
+}
+
+.heyhi-page .highlight-yell {
+  background: linear-gradient(180deg, transparent 60%, var(--yellow) 60%);
+}
+
+.heyhi-page .photo-collage {
+  position: relative;
+  min-height: 520px;
+}
+
+.heyhi-page .photo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid var(--ink);
+  background: #fff;
+  box-shadow: 5px 5px 0 rgba(42, 38, 34, .15);
+}
+
+.heyhi-page .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heyhi-page .photo-current {
+  top: 0;
+  left: 9%;
+  width: min(360px, 78%);
+  height: 250px;
+  transform: rotate(-4deg);
+}
+
+.heyhi-page .photo-plan {
+  top: 170px;
+  right: 0;
+  width: min(310px, 64%);
+  height: 230px;
+  transform: rotate(3deg);
+}
+
+.heyhi-page .photo-detail {
+  bottom: 0;
+  left: 4%;
+  width: min(320px, 68%);
+  height: 210px;
+  transform: rotate(-2deg);
+}
+
+.heyhi-page .build-grid,
+.heyhi-page .pay-grid,
+.heyhi-page .trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.heyhi-page .trust-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.heyhi-page .build-card,
+.heyhi-page .pay-card {
+  position: relative;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.heyhi-page .build-card-inner,
+.heyhi-page .pay-card-inner,
+.heyhi-page .trust-card,
+.heyhi-page .tax-inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.heyhi-page .build-card-inner {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 28px;
+}
+
+.heyhi-page .build-num {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.heyhi-page .build-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.heyhi-page .build-title,
+.heyhi-page .pay-card-title,
+.heyhi-page .trust-card h3 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-family: var(--f-brush);
+  font-size: clamp(2rem, 3.5vw, 2.45rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.heyhi-page .build-desc,
+.heyhi-page .pay-card-desc,
+.heyhi-page .trust-card p,
+.heyhi-page .tax-inner p,
+.heyhi-page .confirmation-card p,
+.heyhi-page .faq-list p,
+.heyhi-page .payment-note {
+  margin: 0;
+  color: #555;
+  font-family: var(--f-body);
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+.heyhi-page .build-price {
+  flex-shrink: 0;
+  font-family: var(--f-brush);
+  font-size: clamp(1.7rem, 3vw, 2.1rem);
+  font-weight: 400;
+  text-align: right;
+}
+
+.heyhi-page .pay-block {
+  isolation: isolate;
+}
+
+.heyhi-page .pay-card-inner {
+  padding: 32px 36px;
+}
+
+.heyhi-page .pay-card.yellow .pay-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--yellow);
+}
+
+.heyhi-page .pay-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.heyhi-page .pay-card-desc {
+  margin-bottom: 24px;
+}
+
+.heyhi-page .account-box {
+  padding: 18px 22px;
+  border: 3px solid var(--ink);
+  border-radius: 18px 20px 17px 19px;
+  background: var(--bg);
+  transform: rotate(.4deg);
+}
+
+.heyhi-page .account-label {
+  margin-bottom: 4px;
+  color: #888;
+  font-family: var(--f-sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.heyhi-page .account-number {
+  color: var(--blue);
+  font-family: var(--f-brush);
+  font-size: clamp(2.1rem, 4vw, 2.65rem);
+  line-height: 1;
+}
+
+.heyhi-page .account-meta {
+  margin-top: 8px;
+  color: #666;
+  font-size: 1.15rem;
+}
+
+.heyhi-page .payment-note,
+.heyhi-page .bank-link {
+  display: block;
+  margin-top: 16px;
+}
+
+.heyhi-page .amount-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.heyhi-page .amount-button {
+  padding: 6px 22px;
+  border: 3px solid var(--ink);
+  border-radius: 18px 20px 17px 19px;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--f-brush);
+  font-size: 26px;
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+  transition: transform .12s, background .12s, color .12s;
+}
+
+.heyhi-page .amount-button:nth-child(1) { transform: rotate(-1.5deg); }
+.heyhi-page .amount-button:nth-child(2) { transform: rotate(.8deg); }
+.heyhi-page .amount-button:nth-child(3) { transform: rotate(-.5deg); }
+.heyhi-page .amount-button:nth-child(4) { transform: rotate(1.2deg); }
+
+.heyhi-page .amount-button:hover,
+.heyhi-page .amount-button:focus-visible {
+  transform: translateY(-2px) rotate(0deg);
+}
+
+.heyhi-page .amount-button.is-active {
+  background: var(--green);
+  color: #fff;
+}
+
+.heyhi-page .custom-amount-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.heyhi-page #custom-amount-input {
+  width: 200px;
+  padding: 8px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 14px 16px 13px 15px;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 22px;
+}
+
+.heyhi-page #custom-amount-input:focus {
+  outline: none;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.heyhi-page .qr-wrap {
+  flex-shrink: 0;
+  width: min(220px, 100%);
+  padding: 10px;
+  border: 3px solid var(--ink);
+  border-radius: 14px 16px 13px 15px;
+  background: #fff;
+  box-shadow: 4px 4px 0 var(--ink);
+  transform: rotate(-2deg);
+}
+
+.heyhi-page #qr-code {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-conic-gradient(var(--ink) 0 25%, #fff 0 50%) 50%/16px 16px;
+}
+
+.heyhi-page #qr-code svg {
+  width: 140px;
+  height: 140px;
+}
+
+.heyhi-page .qr-panel strong {
+  display: block;
+  margin: 4px 0;
+  font-family: var(--f-brush);
+  font-size: 1.45rem;
+  text-align: center;
+}
+
+.heyhi-page .qr-panel p {
+  margin: 8px 0 0;
+  color: rgba(42, 38, 34, .7);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.heyhi-page .trust-card,
+.heyhi-page .tax-inner {
+  padding: 28px 30px;
+}
+
+.heyhi-page .tax-inner {
+  max-width: 980px;
+  background: var(--yellow);
+}
+
+.heyhi-page .tax-inner p + p {
+  margin-top: 12px;
+}
+
+.heyhi-page .confirmation-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  max-width: 980px;
+  padding: 28px 32px;
+  border: 3px solid var(--ink);
+  border-radius: 24px 28px 22px 26px;
+  background: #fff;
+  box-shadow: 5px 5px 0 rgba(42, 38, 34, .14);
+  transform: rotate(.3deg);
+}
+
+.heyhi-page .faq-list {
+  display: grid;
+  max-width: 980px;
+  gap: 14px;
+}
+
+.heyhi-page .faq-list details {
+  overflow: hidden;
+  border: 3px solid var(--ink);
+  border-radius: 18px 20px 17px 19px;
+  background: #fff;
+  box-shadow: 3px 3px 0 rgba(42, 38, 34, .1);
+}
+
+.heyhi-page .faq-list summary {
+  padding: 18px 22px;
+  color: var(--ink);
+  font-family: var(--f-brush);
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.heyhi-page .faq-list details[open] summary {
+  border-bottom: 3px dashed rgba(42, 38, 34, .18);
+}
+
+.heyhi-page .faq-list p {
+  padding: 16px 22px 22px;
+}
+
+.heyhi-page .inline-link {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.heyhi-page footer.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 40px clamp(20px, 6vw, 80px) 50px;
+  border-top: 3px dashed var(--ink);
+}
+
+.heyhi-page .footer-meta {
+  max-width: 760px;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.heyhi-page .footer-conf {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .heyhi-page .hero-row,
+  .heyhi-page .proc-row,
+  .heyhi-page .pay-grid,
+  .heyhi-page .build-grid,
+  .heyhi-page .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .heyhi-page .trust-grid {
+    max-width: 780px;
+  }
+
+  .heyhi-page .pay-card.yellow .pay-card-inner {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .heyhi-page nav.site {
+    align-items: flex-start;
+  }
+
+  .heyhi-page .nav-links {
+    display: none;
+  }
+
+  .heyhi-page .hero {
+    padding-top: 24px;
+    padding-bottom: 60px;
+  }
+
+  .heyhi-page .hero-title .hl,
+  .heyhi-page .hero-title-2 .hl {
+    --size: clamp(58px, 16vw, 96px) !important;
+  }
+
+  .heyhi-page .hero-title,
+  .heyhi-page .hero-title-2 {
+    margin-left: 0;
+  }
+
+  .heyhi-page .section-word .hl {
+    --size: clamp(52px, 12vw, 82px) !important;
+  }
+
+  .heyhi-page .photo-collage {
+    min-height: 500px;
+  }
+
+  .heyhi-page .pay-card.yellow .pay-card-inner {
+    display: block;
+  }
+
+  .heyhi-page .qr-wrap {
+    margin-top: 24px;
+  }
+
+  .heyhi-page footer.site {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .heyhi-page .hero-intro {
+    flex-wrap: wrap;
+  }
+
+  .heyhi-page .hand-word {
+    white-space: normal;
+  }
+
+  .heyhi-page .hero-title-word {
+    white-space: nowrap;
+  }
+
+  .heyhi-page .progress-row,
+  .heyhi-page .progress-foot,
+  .heyhi-page .confirmation-card {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .heyhi-page .progress-row,
+  .heyhi-page .progress-foot {
+    gap: 6px;
+  }
+
+  .heyhi-page .sticker-help {
+    right: 8px;
+  }
+
+  .heyhi-page .build-card-inner {
+    display: grid;
+    gap: 14px;
+  }
+
+  .heyhi-page .build-price {
+    text-align: left;
+  }
+
+  .heyhi-page .photo-collage {
+    min-height: 0;
+    display: grid;
+    gap: 16px;
+  }
+
+  .heyhi-page .photo {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 220px;
+  }
+
+  .heyhi-page .photo-plan,
+  .heyhi-page .photo-detail {
+    width: 92%;
+    margin: -12px auto 0;
+  }
+
+  .heyhi-page .footer-conf,
+  .heyhi-page .generated-confetti:nth-child(n+36) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heyhi-page *,
+  .heyhi-page *::before,
+  .heyhi-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
