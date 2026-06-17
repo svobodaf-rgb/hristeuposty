@@ -4968,6 +4968,9 @@ select:focus-visible,
   display: flex;
   align-items: center;
   gap: 14px;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 32px;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
@@ -4977,19 +4980,29 @@ select:focus-visible,
 .heyhi-page .hero-squiggle {
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .heyhi-page .hero-title {
-  margin-left: min(20px, 2vw);
+  padding-left: min(20px, 2vw);
 }
 
 .heyhi-page .hero-squiggle {
-  max-width: 420px;
-  margin: 12px 0 12px min(80px, 8vw);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: min(80px, 8vw);
+}
+
+.heyhi-page .hero-squiggle svg {
+  width: min(420px, 100%);
 }
 
 .heyhi-page .hero-title-2 {
-  margin-left: min(60px, 6vw);
+  padding-left: min(60px, 6vw);
   margin-bottom: 48px;
 }
 
@@ -5001,7 +5014,7 @@ select:focus-visible,
   gap: 60px;
   align-items: center;
   max-width: 1240px;
-  margin-top: 32px;
+  margin: 32px auto 0;
 }
 
 .heyhi-page .hero-subtitle {
@@ -5607,7 +5620,11 @@ select:focus-visible,
 
   .heyhi-page .hero-title,
   .heyhi-page .hero-title-2 {
-    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .heyhi-page .hero-squiggle {
+    padding-left: 0;
   }
 
   .heyhi-page .section-word .hl {
