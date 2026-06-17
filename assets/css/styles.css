@@ -4956,6 +4956,8 @@ select:focus-visible,
 
 .heyhi-page .hero {
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
   min-height: min(920px, auto);
   padding: 40px clamp(20px, 6vw, 80px) 80px;
 }
