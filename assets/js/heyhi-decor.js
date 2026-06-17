@@ -190,7 +190,16 @@
     }
   }
 
+  function markHandLetteringAsDecorative() {
+    document.querySelectorAll(".hand-word[aria-label]").forEach((word) => {
+      word.querySelectorAll(".hl, .space").forEach((part) => {
+        part.setAttribute("aria-hidden", "true");
+      });
+    });
+  }
+
   function initHeyHiDecor() {
+    markHandLetteringAsDecorative();
     document.querySelectorAll("svg.squiggle").forEach(buildSquiggle);
     document.querySelectorAll("svg.underline-rough").forEach(buildUnderline);
     document.querySelectorAll(".confetti-bg[data-confetti]").forEach(buildConfetti);

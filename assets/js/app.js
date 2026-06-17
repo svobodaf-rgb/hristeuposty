@@ -466,6 +466,7 @@ function setStaticContent() {
   els.footerTransparentLink.removeAttribute("aria-disabled");
 
   document.querySelector("#fundraising-progress").classList.toggle("is-zero-state", isZeroState);
+  els.collectedAmount.hidden = isZeroState;
   els.progressTrack.hidden = isZeroState;
   els.progressPercent.hidden = isZeroState;
   els.donorCount.hidden = isZeroState;

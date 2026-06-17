@@ -13,12 +13,12 @@
       http-equiv="Permissions-Policy"
       content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
     />
-    <title>Hřiště U Pošty | Veřejná sbírka Palmovka</title>
+    <title>Veřejná sbírka Palmovka | Hřiště U Pošty</title>
     <meta
       name="description"
       content="Veřejná sbírka na rekonstrukci hřiště na křižovatce ulic V Mezihoří a U Pošty v Praze a jeho celkovou revitalizaci."
     />
-    <meta property="og:title" content="Hřiště U Pošty | Veřejná sbírka Palmovka" />
+    <meta property="og:title" content="Veřejná sbírka Palmovka | Hřiště U Pošty" />
     <meta
       property="og:description"
       content="Transparentní účet veřejné sbírky pro rekonstrukci a celkovou revitalizaci hřiště U Pošty v Praze 8."
@@ -37,7 +37,7 @@
         <svg class="heart-icon" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" style="transform: rotate(-15deg)">
           <path d="M12 21s-7-4.5-9.5-9C0.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8C19 16.5 12 21 12 21z" fill="var(--red)" />
         </svg>
-        Hřiště u pošty
+        Hřiště U Pošty
       </a>
       <div class="nav-links">
         <a href="#pribeh">O projektu</a>
@@ -105,14 +105,14 @@
             <div class="hand-frame">
               <div class="progress-box">
                 <div class="progress-row">
-                  <span id="vybrano-amount">— Kč</span>
-                  <span id="progress-percent">0 %</span>
+                  <span id="vybrano-amount" hidden></span>
+                  <span id="progress-percent" hidden></span>
                 </div>
-                <div class="progress-track" aria-hidden="true">
+                <div class="progress-track" aria-hidden="true" hidden>
                   <div class="progress-bar" id="progress-bar"></div>
                 </div>
                 <div class="progress-foot">
-                  <span id="donor-count">0 dárců</span>
+                  <span id="donor-count" hidden></span>
                   <span id="cil-amount">Cíl: 2 000 000 Kč</span>
                 </div>
                 <div class="progress-meta-hidden" id="progress-percent-group">
@@ -137,7 +137,7 @@
 
       <section class="block" id="pribeh">
         <div class="section-header">
-          <span class="hand-word section-word" aria-label="Proč?">
+          <span class="hand-word section-word" role="heading" aria-level="2" aria-label="Proč?">
             <span class="hl" style="--c1:var(--teal);--c2:var(--orange);--size:120px;--rot:-3deg"><span class="hl-shadow">P</span><span class="hl-front">P</span></span>
             <span class="hl solid" style="--c1:var(--pink);--size:115px;--rot:2deg;--ty:3px"><span class="hl-front">R</span></span>
             <span class="hl" style="--c1:var(--blue);--c2:var(--yellow);--size:118px;--rot:-1deg"><span class="hl-shadow">O</span><span class="hl-front">O</span></span>
@@ -153,7 +153,7 @@
 
         <div class="proc-row">
           <div class="proc-text">
-            <p>Hřiště u pošty slouží dětem z okolí <span class="highlight-yell">od roku 2003.</span></p>
+            <p>Hřiště U Pošty slouží dětem z okolí <span class="highlight-yell">od roku 2003.</span></p>
             <p>Původní vybavení dosluhuje. Chceme obnovit herní prvky, dopadové plochy i místo pro rodiče tak, aby hřiště zase dobře fungovalo každý den.</p>
             <p>Sbírku pořádá místní spolek sousedů. Účel je konkrétní: rekonstrukce hřiště na křižovatce ulic V Mezihoří a U Pošty a jeho celková revitalizace.</p>
           </div>
@@ -175,7 +175,7 @@
 
       <section class="block" id="co-stavime">
         <div class="section-header">
-          <span class="hand-word section-word" aria-label="Co stavíme?">
+          <span class="hand-word section-word" role="heading" aria-level="2" aria-label="Co stavíme?">
             <span class="hl solid" style="--c1:var(--orange);--size:120px;--rot:-2deg"><span class="hl-front">C</span></span>
             <span class="hl" style="--c1:var(--blue);--c2:var(--pink);--size:115px;--rot:3deg"><span class="hl-shadow">O</span><span class="hl-front">O</span></span>
             <span class="space"></span>
@@ -229,7 +229,7 @@
       <section class="block pay-block" id="platba">
         <div class="confetti-bg" data-confetti data-count="40" data-seed="9" aria-hidden="true"></div>
         <div class="section-header relz">
-          <span class="hand-word section-word" aria-label="Jak přispět?">
+          <span class="hand-word section-word" role="heading" aria-level="2" aria-label="Jak přispět?">
             <span class="hl" style="--c1:var(--red);--c2:var(--teal);--size:120px;--rot:-3deg"><span class="hl-shadow">J</span><span class="hl-front">J</span></span>
             <span class="hl solid" style="--c1:var(--blue);--size:118px;--rot:2deg"><span class="hl-front">A</span></span>
             <span class="hl" style="--c1:var(--yellow);--c2:var(--purple);--size:122px;--rot:-1deg"><span class="hl-shadow">K</span><span class="hl-front">K</span></span>
@@ -255,7 +255,7 @@
                 <div id="account-number" class="account-number">369889612/0300</div>
                 <div class="account-meta">Banka: <strong id="bank-name">Československá obchodní banka, a. s.</strong></div>
                 <div class="account-meta">IBAN: <span id="account-iban">CZ32 0300 0000 0003 6988 9612</span></div>
-                <div class="account-meta" style="margin-top:10px;">Zpráva: Hřiště u pošty</div>
+                <div class="account-meta" style="margin-top:10px;">Zpráva: Hřiště U Pošty</div>
               </div>
               <p class="payment-note">
                 U transparentního účtu mohou být údaje o platbě veřejně viditelné.
@@ -365,7 +365,7 @@
         <svg class="heart-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 21s-7-4.5-9.5-9C0.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8C19 16.5 12 21 12 21z" fill="var(--red)" />
         </svg>
-        Hřiště u pošty
+        Hřiště U Pošty
       </div>
       <div class="footer-meta">
         <strong>Spolek pro správu a zvelebení dětského hřiště U Pošty</strong><br />
