@@ -5316,7 +5316,7 @@ select:focus-visible,
 }
 
 .heyhi-page .build-num .hl + .hl {
-  margin-left: -0.12em;
+  margin-left: -0.42em;
 }
 
 .heyhi-page .build-body {
@@ -5793,7 +5793,7 @@ select:focus-visible,
 .heyhi-page .progress-foot,
 .heyhi-page .progress-note,
 .heyhi-page .footer-meta {
-  font-size: 1.01rem;
+  font-size: 1.07rem;
 }
 
 .heyhi-page #vybrano-amount,
@@ -5806,11 +5806,11 @@ select:focus-visible,
 }
 
 .heyhi-page .proc-text p {
-  font-size: 1.01rem;
+  font-size: 1.07rem;
 }
 
 .heyhi-page .proc-text p + p {
-  font-size: 1.01rem;
+  font-size: 1.07rem;
 }
 
 .heyhi-page .build-desc,
@@ -5820,11 +5820,15 @@ select:focus-visible,
 .heyhi-page .confirmation-card p,
 .heyhi-page .faq-list p,
 .heyhi-page .payment-note {
-  font-size: 1.01rem;
+  font-size: 1.07rem;
 }
 
 .heyhi-page .qr-panel p {
-  font-size: 0.9rem;
+  font-size: 0.96rem;
+}
+
+.heyhi-page .account-label {
+  font-size: 15px;
 }
 
 @media (max-width: 900px) {
@@ -5991,7 +5995,7 @@ select:focus-visible,
   }
 
   .heyhi-page .footer-meta {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .heyhi-page footer.site {
