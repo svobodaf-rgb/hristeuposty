@@ -5811,3 +5811,166 @@ select:focus-visible,
     --size: clamp(36px, 8.2vw, 56px) !important;
   }
 }
+
+/* Codex cleanup 2026-06-18: Claude design handoff compatibility. */
+.heyhi-page .pay-card-title {
+  line-height: 1.12;
+}
+
+.heyhi-page .amount-button {
+  white-space: nowrap;
+}
+
+.heyhi-page .plan-figure {
+  max-width: 880px;
+  margin: 0 auto 52px;
+}
+
+.heyhi-page .plan-figure .pf-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.heyhi-page .plan-figure img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.heyhi-page .plan-figure figcaption {
+  margin-top: 16px;
+  color: #888;
+  font-family: var(--f-body);
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.heyhi-page .footer-links {
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heyhi-page .footer-links a {
+  border-bottom: 2px solid transparent;
+  transition: .12s;
+}
+
+.heyhi-page .footer-links a:hover,
+.heyhi-page .footer-links a:focus-visible {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+
+@media (max-width: 1280px) {
+  html,
+  body {
+    min-width: 0;
+  }
+
+  .heyhi-page nav.site,
+  .heyhi-page section.block,
+  .heyhi-page .hero,
+  .heyhi-page footer.site {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .heyhi-page nav.site {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    padding: 20px 28px;
+  }
+
+  .heyhi-page .hero {
+    min-height: 0;
+    padding: 24px 28px 56px;
+  }
+
+  .heyhi-page .hero-title-2,
+  .heyhi-page .hero-squiggle {
+    margin-left: 24px;
+  }
+
+  .heyhi-page .hero-row,
+  .heyhi-page .proc-row,
+  .heyhi-page .build-grid,
+  .heyhi-page .pay-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .heyhi-page .progress-wrap,
+  .heyhi-page .plan-figure {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .heyhi-page section.block {
+    padding: 48px 28px;
+  }
+
+  .heyhi-page .section-header {
+    margin-bottom: 32px;
+  }
+
+  .heyhi-page .pay-card.yellow .pay-card-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .heyhi-page .qr-wrap {
+    align-self: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .heyhi-page .hero-intro {
+    font-size: 18px;
+  }
+
+  .heyhi-page .hero-subtitle {
+    font-size: 22px;
+  }
+
+  .heyhi-page .proc-text p {
+    font-size: 20px;
+  }
+
+  .heyhi-page .proc-text p + p {
+    font-size: 18px;
+  }
+
+  .heyhi-page .build-card-inner {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 18px 20px;
+    gap: 12px 14px;
+  }
+
+  .heyhi-page .build-price {
+    width: 100%;
+    text-align: left;
+  }
+
+  .heyhi-page .pay-card-inner {
+    padding: 24px 22px;
+  }
+
+  .heyhi-page .footer-meta {
+    font-size: 15px;
+  }
+
+  .heyhi-page footer.site {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+}

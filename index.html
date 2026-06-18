@@ -105,14 +105,14 @@
             <div class="hand-frame">
               <div class="progress-box">
                 <div class="progress-row">
-                  <span id="vybrano-amount" hidden></span>
-                  <span id="progress-percent" hidden></span>
+                  <span id="vybrano-amount">Sbírka začíná</span>
+                  <span id="progress-percent"></span>
                 </div>
                 <div class="progress-track" aria-hidden="true" hidden>
                   <div class="progress-bar" id="progress-bar"></div>
                 </div>
                 <div class="progress-foot">
-                  <span id="donor-count" hidden></span>
+                  <span id="donor-count">0 Kč vybráno</span>
                   <span id="cil-amount">Cíl: 2 000 000 Kč</span>
                 </div>
                 <div class="progress-meta-hidden" id="progress-percent-group">
@@ -153,9 +153,9 @@
 
         <div class="proc-row">
           <div class="proc-text">
-            <p>Hřiště U Pošty slouží dětem z okolí <span class="highlight-yell">od roku 2003.</span></p>
-            <p>Původní vybavení dosluhuje. Chceme obnovit herní prvky, dopadové plochy i místo pro rodiče tak, aby hřiště zase dobře fungovalo každý den.</p>
-            <p>Sbírku pořádá místní spolek sousedů. Účel je konkrétní: rekonstrukce hřiště na křižovatce ulic V Mezihoří a U Pošty a jeho celková revitalizace.</p>
+            <p>Hřiště U Pošty slouží dětem z celého okolí <span class="highlight-yell">od roku 2003.</span></p>
+            <p>Po letech každodenního provozu původní vybavení dosluhuje a přestává stačit dnešním potřebám dětí i rodičů.</p>
+            <p>Projekt vznikl z iniciativy rodičů a sousedů. Usilujeme o dotace a granty — ale abychom hřiště zvládli postavit, potřebujeme všechny dostupné zdroje včetně vaší pomoci.</p>
           </div>
 
           <div class="photo-collage" id="galerie" aria-label="Fotky a návrh hřiště">
@@ -192,33 +192,36 @@
           </span>
         </div>
 
+        <figure class="plan-figure">
+          <div class="hand-frame pf-card">
+            <img src="assets/images/dispozice.png" alt="Návrh dispozice hřiště U pošty — rozmístění herního komplexu, pískoviště, houpaček, zeleně a mobiliáře na ploše přibližně 600 m²." />
+          </div>
+          <figcaption>Návrh dispozice — orientační rozmístění prvků. Přesné rozměry ověří projektant.</figcaption>
+        </figure>
+
         <div class="build-grid">
           <article class="build-card" style="transform: rotate(-.4deg)">
             <div class="hand-frame"><div class="build-card-inner">
               <div class="build-num"><span class="hl" style="--c1:var(--teal);--c2:var(--pink);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--pink);--c2:var(--teal);--size:64px"><span class="hl-shadow">1</span><span class="hl-front">1</span></span></div>
               <div class="build-body"><h2 class="build-title">Herní sestava</h2><p class="build-desc">Prolézačky, lezecká stěna, skluzavka a houpačky.</p><svg class="underline-rough" data-color="teal" data-width="120" data-stroke="3.5"></svg></div>
-              <strong class="build-price" style="color: var(--teal)">720 000 Kč</strong>
             </div></div>
           </article>
           <article class="build-card" style="transform: rotate(.6deg)">
             <div class="hand-frame"><div class="build-card-inner">
               <div class="build-num"><span class="hl" style="--c1:var(--orange);--c2:var(--blue);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--blue);--c2:var(--orange);--size:64px"><span class="hl-shadow">2</span><span class="hl-front">2</span></span></div>
               <div class="build-body"><h2 class="build-title">Dopadové plochy</h2><p class="build-desc">Bezpečné povrchy podle norem pro dětská hřiště.</p><svg class="underline-rough" data-color="orange" data-width="120" data-stroke="3.5"></svg></div>
-              <strong class="build-price" style="color: var(--orange)">280 000 Kč</strong>
             </div></div>
           </article>
           <article class="build-card" style="transform: rotate(-.5deg)">
             <div class="hand-frame"><div class="build-card-inner">
               <div class="build-num"><span class="hl" style="--c1:var(--purple);--c2:var(--yellow);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--yellow);--c2:var(--purple);--size:64px"><span class="hl-shadow">3</span><span class="hl-front">3</span></span></div>
               <div class="build-body"><h2 class="build-title">Zeleň a prostor</h2><p class="build-desc">Přehlednější a příjemnější místo pro každodenní používání.</p><svg class="underline-rough" data-color="purple" data-width="120" data-stroke="3.5"></svg></div>
-              <strong class="build-price" style="color: var(--purple)">350 000 Kč</strong>
             </div></div>
           </article>
           <article class="build-card" style="transform: rotate(.4deg)">
             <div class="hand-frame"><div class="build-card-inner">
               <div class="build-num"><span class="hl" style="--c1:var(--pink);--c2:var(--teal);--size:64px"><span class="hl-shadow">0</span><span class="hl-front">0</span></span><span class="hl" style="--c1:var(--teal);--c2:var(--pink);--size:64px"><span class="hl-shadow">4</span><span class="hl-front">4</span></span></div>
               <div class="build-body"><h2 class="build-title">Mobiliář a oplocení</h2><p class="build-desc">Lavičky, oplocení a drobnosti, bez kterých hřiště nefunguje.</p><svg class="underline-rough" data-color="pink" data-width="120" data-stroke="3.5"></svg></div>
-              <strong class="build-price" style="color: var(--pink)">650 000 Kč</strong>
             </div></div>
           </article>
         </div>
@@ -368,6 +371,10 @@
           <path d="M12 21s-7-4.5-9.5-9C0.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8C19 16.5 12 21 12 21z" fill="var(--red)" />
         </svg>
         Hřiště U Pošty
+      </div>
+      <div class="footer-links">
+        <a href="pravni-dokumenty.html">Právní dokumenty</a>
+        <a href="potvrzeni-o-daru.html">Potvrzení o daru</a>
       </div>
       <div class="footer-meta">
         <strong>Spolek pro správu a zvelebení dětského hřiště U Pošty</strong><br />
