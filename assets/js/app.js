@@ -461,9 +461,11 @@ function setStaticContent() {
   els.accountIban.textContent = CONFIG.iban;
   els.bankName.textContent = CONFIG.bankName;
   els.targetAmount.textContent = "Cíl: " + shared.formatCurrency(CONFIG.targetAmountCzk);
-  els.footerTransparentLink.textContent = "Transparentní účet u ČSOB";
-  els.footerTransparentLink.href = CONFIG.transparentAccountUrl;
-  els.footerTransparentLink.removeAttribute("aria-disabled");
+  if (els.footerTransparentLink) {
+    els.footerTransparentLink.textContent = "Transparentní účet u ČSOB";
+    els.footerTransparentLink.href = CONFIG.transparentAccountUrl;
+    els.footerTransparentLink.removeAttribute("aria-disabled");
+  }
 
   document.querySelector("#fundraising-progress").classList.toggle("is-zero-state", isZeroState);
   els.collectedAmount.hidden = isZeroState;
