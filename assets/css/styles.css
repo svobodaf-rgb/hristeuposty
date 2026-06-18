@@ -5085,6 +5085,10 @@ select:focus-visible,
   overflow: hidden;
 }
 
+.heyhi-page .is-zero-state .progress-track {
+  display: block;
+}
+
 .heyhi-page .progress-track[hidden],
 .heyhi-page [hidden] {
   display: none !important;
@@ -5304,6 +5308,15 @@ select:focus-visible,
 .heyhi-page .build-num {
   flex-shrink: 0;
   display: flex;
+  gap: 0;
+}
+
+.heyhi-page .build-num .hl {
+  margin-right: 0;
+}
+
+.heyhi-page .build-num .hl + .hl {
+  margin-left: -0.12em;
 }
 
 .heyhi-page .build-body {
@@ -5572,12 +5585,16 @@ select:focus-visible,
 }
 
 .heyhi-page footer.site {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 28px;
   padding: 40px clamp(20px, 6vw, 80px) 50px;
   border-top: 3px dashed var(--ink);
+}
+
+.heyhi-page footer.site > .logo {
+  justify-self: start;
 }
 
 .heyhi-page .footer-meta {
@@ -5592,12 +5609,15 @@ select:focus-visible,
   display: grid;
   gap: 10px;
   justify-items: center;
+  justify-self: center;
+  text-align: center;
 }
 
 .heyhi-page .footer-conf {
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-self: end;
 }
 
 @media (max-width: 1100px) {
@@ -5773,7 +5793,7 @@ select:focus-visible,
 .heyhi-page .progress-foot,
 .heyhi-page .progress-note,
 .heyhi-page .footer-meta {
-  font-size: 0.92rem;
+  font-size: 1.01rem;
 }
 
 .heyhi-page #vybrano-amount,
@@ -5782,15 +5802,15 @@ select:focus-visible,
 }
 
 .heyhi-page .hero-subtitle {
-  font-size: clamp(0.98rem, 1.45vw, 1.15rem);
+  font-size: clamp(1.08rem, 1.6vw, 1.27rem);
 }
 
 .heyhi-page .proc-text p {
-  font-size: 0.92rem;
+  font-size: 1.01rem;
 }
 
 .heyhi-page .proc-text p + p {
-  font-size: 0.92rem;
+  font-size: 1.01rem;
 }
 
 .heyhi-page .build-desc,
@@ -5800,11 +5820,11 @@ select:focus-visible,
 .heyhi-page .confirmation-card p,
 .heyhi-page .faq-list p,
 .heyhi-page .payment-note {
-  font-size: 0.92rem;
+  font-size: 1.01rem;
 }
 
 .heyhi-page .qr-panel p {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 900px) {
@@ -5975,6 +5995,7 @@ select:focus-visible,
   }
 
   .heyhi-page footer.site {
+    display: flex;
     flex-direction: column;
     gap: 14px;
     text-align: center;

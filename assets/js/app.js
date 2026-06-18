@@ -468,22 +468,21 @@ function setStaticContent() {
   }
 
   document.querySelector("#fundraising-progress").classList.toggle("is-zero-state", isZeroState);
-  els.collectedAmount.hidden = isZeroState;
-  els.progressTrack.hidden = isZeroState;
-  els.progressPercent.hidden = isZeroState;
-  els.donorCount.hidden = isZeroState;
+  els.collectedAmount.hidden = false;
+  els.progressTrack.hidden = false;
+  els.progressPercent.hidden = false;
+  els.donorCount.hidden = false;
   els.progressPercentGroup.hidden = isZeroState;
   els.donorCountGroup.hidden = isZeroState;
 
   if (isZeroState) {
-    els.collectedAmount.textContent =
-      "Sbírka startuje 15. 5. 2026. Aktuální stav budeme zveřejňovat v týdenním rytmu.";
-    els.progressPercent.textContent = "Po prvních příspěvcích";
+    els.collectedAmount.textContent = shared.formatCurrency(CONFIG.collectedAmountCzk);
+    els.progressPercent.textContent = "0 %";
     els.progressPercentLabel.textContent = "";
-    els.donorCount.textContent = "Stav aktualizujeme ručně";
+    els.donorCount.textContent = "0 Kč vybráno";
     els.donorCountLabel.textContent = "";
-    els.remainingLabel.textContent = "Cíl sbírky: ";
-    els.remainingAmount.textContent = shared.formatCurrency(CONFIG.targetAmountCzk);
+    els.remainingLabel.textContent = "Stav budeme aktualizovat ručně jednou týdně.";
+    els.remainingAmount.textContent = "";
   } else {
     els.collectedAmount.textContent = shared.formatCurrency(CONFIG.collectedAmountCzk);
     els.remainingAmount.textContent = shared.formatCurrency(remaining);
@@ -495,10 +494,10 @@ function setStaticContent() {
   }
 
   els.gdprPolicyLinks.forEach((link) => {
-    applyHref(link, CONFIG.privacyUrl);
+    applyHref(link, "pravni-dokumenty.html");
   });
   els.transparentAccountPrivacyLinks.forEach((link) => {
-    applyHref(link, CONFIG.transparentAccountInfoUrl);
+    applyHref(link, "pravni-dokumenty.html");
   });
 
   const animateProgress = () => {
